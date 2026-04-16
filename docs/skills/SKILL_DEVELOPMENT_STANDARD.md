@@ -82,6 +82,27 @@ def config_schema(self) -> Dict[str, Any]:
 "required": ["skill", "model", "target"]
 ```
 
+#### 2.1.3 例外：后处理技能
+
+以下技能是**后处理/结果导出类技能**，它们不需要 `model` 字段，因为操作对象是已有的仿真结果（通过 `job_id` 或文件路径）：
+
+```python
+# 后处理技能
+"required": ["skill", "source"]  # 或 ["skill"]（查询类技能）
+```
+
+**后处理技能包括**：
+| 类别 | 技能 |
+|------|------|
+| 结果导出类 | `waveform_export`, `hdf5_export`, `comtrade_export` |
+| 可视化类 | `visualize`, `compare_visualization` |
+| 报告类 | `report_generator` |
+| 查询类 | `component_catalog` |
+| 批量处理类 | `batch_powerflow`, `batch_task_manager` |
+| 结果分析类 | `result_compare`, `disturbance_severity` |
+
+**注意**：这些技能仍必须包含 `"skill"` 在 required 中。
+
 ### 2.2 数据类型规范
 
 #### 2.2.1 数值类型
