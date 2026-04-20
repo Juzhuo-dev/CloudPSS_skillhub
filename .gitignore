@@ -42,6 +42,7 @@ venv/
 # CloudPSS
 token
 .cloudpss_token
+.cloudpss_token_internal
 *.token
 
 # Results
