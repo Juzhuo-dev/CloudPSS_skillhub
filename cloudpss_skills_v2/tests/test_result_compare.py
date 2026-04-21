@@ -47,10 +47,10 @@ pass  # TODO: restore
 #              50 POP_TOP
 # 
 #   5          52 LOAD_CONST               1 (0)
-#              54 LOAD_CONST               4 (('ResultCompareSkill',))
-#              56 IMPORT_NAME             10 (cloudpss_skills_v2.skills.result_compare)
-#              58 IMPORT_FROM             11 (ResultCompareSkill)
-#              60 STORE_NAME              11 (ResultCompareSkill)
+#              54 LOAD_CONST               4 (('ResultCompareTool',))
+#              56 IMPORT_NAME             10 (cloudpss_skills_v2.tools.result_compare)
+#              58 IMPORT_FROM             11 (ResultCompareTool)
+#              60 STORE_NAME              11 (ResultCompareTool)
 #              62 POP_TOP
 # 
 #   8          64 PUSH_NULL
@@ -97,7 +97,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_valid_config at 0x3aeff050, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 9>:
 #   9           0 RESUME                   0
 # 
-#  10           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  10           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -203,7 +203,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_missing_sources at 0x3af9bd40, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 21>:
 #  21           0 RESUME                   0
 # 
-#  22           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  22           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -355,7 +355,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_single_source at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 27>:
 #  27           0 RESUME                   0
 # 
-#  28           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  28           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -435,7 +435,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_invalid_time_range at 0x3afa5260, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 32>:
 #  32           0 RESUME                   0
 # 
-#  33           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  33           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -626,7 +626,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_insufficient_valid_results at 0x3af9e490, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 44>:
 #  44           0 RESUME                   0
 # 
-#  45           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  45           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -748,7 +748,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_success_with_two_sources at 0x3afaaab0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 55>:
 #  55           0 RESUME                   0
 # 
-#  56           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  56           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1203,7 +1203,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_global_rms_computation at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 72>:
 #  72           0 RESUME                   0
 # 
-#  73           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  73           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1518,7 +1518,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validation_failure_run at 0x3afabfe0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_result_compare.py", line 88>:
 #  88           0 RESUME                   0
 # 
-#  89           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+#  89           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

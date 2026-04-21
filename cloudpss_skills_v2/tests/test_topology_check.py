@@ -38,7 +38,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for TopologyCheckSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for TopologyCheckTool v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -60,10 +60,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('TopologyCheckSkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.topology_check)
-#              46 IMPORT_FROM              9 (TopologyCheckSkill)
-#              48 STORE_NAME               9 (TopologyCheckSkill)
+#              42 LOAD_CONST               3 (('TopologyCheckTool',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.tools.topology_check)
+#              46 IMPORT_FROM              9 (TopologyCheckTool)
+#              48 STORE_NAME               9 (TopologyCheckTool)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -134,7 +134,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa7230, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -211,7 +211,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -315,7 +315,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_islands_single at 0x3afabfe0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 21>:
 #  21           0 RESUME                   0
 # 
-#  22           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  22           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -434,7 +434,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_islands_two at 0x3ae73540, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 28>:
 #  28           0 RESUME                   0
 # 
-#  29           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  29           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -551,7 +551,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_islands_empty at 0x3aed0c90, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 35>:
 #  35           0 RESUME                   0
 # 
-#  36           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  36           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -670,7 +670,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_dangling at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 42>:
 #  42           0 RESUME                   0
 # 
-#  43           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  43           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -849,7 +849,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_dangling_none at 0x3af9a2d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 52>:
 #  52           0 RESUME                   0
 # 
-#  53           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  53           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -979,7 +979,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_parameters_incomplete at 0x3af9b9b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 62>:
 #  62           0 RESUME                   0
 # 
-#  63           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  63           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1093,7 +1093,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_check_parameters_complete at 0x3af8ede0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 70>:
 #  70           0 RESUME                   0
 # 
-#  71           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  71           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1219,7 +1219,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_adjacency at 0x3af9ce50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 80>:
 #  80           0 RESUME                   0
 # 
-#  81           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  81           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1358,7 +1358,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af9ee00, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_topology_check.py", line 89>:
 #  89           0 RESUME                   0
 # 
-#  90           2 LOAD_GLOBAL              1 (NULL + TopologyCheckSkill)
+#  90           2 LOAD_GLOBAL              1 (NULL + TopologyCheckTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

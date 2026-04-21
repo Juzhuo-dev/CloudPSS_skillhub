@@ -1,25 +1,25 @@
-"""Tests for cloudpss_skills_v2.skills.report_generator."""
+"""Tests for cloudpss_skills_v2.tools.report_generator."""
 import pytest
-from cloudpss_skills_v2.skills.report_generator import ReportGeneratorSkill
+from cloudpss_skills_v2.tools.report_generator import ReportGeneratorTool
 
 
-class TestReportGeneratorSkill:
+class TestReportGeneratorTool:
 
     def test_import(self):
         """Smoke test: module and class can be imported."""
-        assert ReportGeneratorSkill is not None
+        assert ReportGeneratorTool is not None
 
     def test_instantiation(self):
         """Smoke test: class can be instantiated."""
         try:
-            instance = ReportGeneratorSkill()
+            instance = ReportGeneratorTool()
         except TypeError:
             pytest.skip("Class requires constructor arguments")
 
     def test_has_name_attribute(self):
         """Smoke test: instance has expected attributes."""
         try:
-            instance = ReportGeneratorSkill()
+            instance = ReportGeneratorTool()
             assert hasattr(instance, 'name') or hasattr(instance, 'run')
         except TypeError:
             pytest.skip("Class requires constructor arguments")

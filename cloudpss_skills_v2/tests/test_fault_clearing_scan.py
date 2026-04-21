@@ -52,10 +52,10 @@ pass  # TODO: restore
 #              50 POP_TOP
 # 
 #   5          52 LOAD_CONST               1 (0)
-#              54 LOAD_CONST               4 (('FaultClearingScanSkill',))
-#              56 IMPORT_NAME             10 (cloudpss_skills_v2.skills.fault_clearing_scan)
-#              58 IMPORT_FROM             11 (FaultClearingScanSkill)
-#              60 STORE_NAME              11 (FaultClearingScanSkill)
+#              54 LOAD_CONST               4 (('FaultClearingScanAnalysis',))
+#              56 IMPORT_NAME             10 (cloudpss_skills_v2.poweranalysis.fault_clearing_scan)
+#              58 IMPORT_FROM             11 (FaultClearingScanAnalysis)
+#              60 STORE_NAME              11 (FaultClearingScanAnalysis)
 #              62 POP_TOP
 # 
 #   8          64 PUSH_NULL
@@ -110,7 +110,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_valid_config at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 9>:
 #   9           0 RESUME                   0
 # 
-#  10           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  10           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -198,7 +198,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_missing_model at 0x3af8e200, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 17>:
 #  17           0 RESUME                   0
 # 
-#  18           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  18           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -350,7 +350,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_missing_fe_values at 0x3af9f150, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 23>:
 #  23           0 RESUME                   0
 # 
-#  24           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  24           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -509,7 +509,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_empty_fe_values at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 30>:
 #  30           0 RESUME                   0
 # 
-#  31           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  31           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -614,7 +614,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_monotonic_degradation at 0x3afa23c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 38>:
 #  38           0 RESUME                   0
 # 
-#  39           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  39           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -739,7 +739,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_non_monotonic at 0x3af95770, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 47>:
 #  47           0 RESUME                   0
 # 
-#  48           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  48           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -864,7 +864,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_single_value at 0x3af9a2d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 56>:
 #  56           0 RESUME                   0
 # 
-#  57           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  57           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -998,7 +998,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validation_failure at 0x3af9b9b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 63>:
 #  63           0 RESUME                   0
 # 
-#  64           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  64           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1100,7 +1100,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_with_voltages at 0x3afa6250, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 68>:
 #  68           0 RESUME                   0
 # 
-#  69           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  69           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1415,7 +1415,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_with_scan_results_provided at 0x3af9e7f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_fault_clearing_scan.py", line 84>:
 #  84           0 RESUME                   0
 # 
-#  85           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanSkill)
+#  85           2 LOAD_GLOBAL              1 (NULL + FaultClearingScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

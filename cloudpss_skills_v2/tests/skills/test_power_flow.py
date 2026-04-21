@@ -30,13 +30,13 @@ class MockPowerFlowAdapter:
         pass  # TODO: restore
 
 
-def TestPowerFlowSkill():
-    """TestPowerFlowSkill"""
+def TestPowerFlowPreset():
+    """TestPowerFlowPreset"""
 pass  # TODO: restore
 
 
-def TestPowerFlowSkillRun():
-    """TestPowerFlowSkillRun"""
+def TestPowerFlowPresetRun():
+    """TestPowerFlowPresetRun"""
 pass  # TODO: restore
 
 
@@ -45,8 +45,8 @@ def TestGenerateSummary():
 pass  # TODO: restore
 
 
-def TestPowerFlowSkillIntegration():
-    """TestPowerFlowSkillIntegration"""
+def TestPowerFlowPresetIntegration():
+    """TestPowerFlowPresetIntegration"""
 pass  # TODO: restore
 
 
@@ -54,7 +54,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for migrated PowerFlowSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for migrated PowerFlowPreset v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -102,10 +102,10 @@ pass  # TODO: restore
 #              86 POP_TOP
 # 
 #  12          88 LOAD_CONST               1 (0)
-#              90 LOAD_CONST               5 (('PowerFlowSkill', 'create_skill'))
-#              92 IMPORT_NAME             18 (cloudpss_skills_v2.skills.power_flow)
-#              94 IMPORT_FROM             19 (PowerFlowSkill)
-#              96 STORE_NAME              19 (PowerFlowSkill)
+#              90 LOAD_CONST               5 (('PowerFlowPreset', 'create_skill'))
+#              92 IMPORT_NAME             18 (cloudpss_skills_v2.presets.power_flow)
+#              94 IMPORT_FROM             19 (PowerFlowPreset)
+#              96 STORE_NAME              19 (PowerFlowPreset)
 #              98 IMPORT_FROM             20 (create_skill)
 #             100 STORE_NAME              20 (create_skill)
 #             102 POP_TOP
@@ -121,19 +121,19 @@ pass  # TODO: restore
 # 
 #  64         126 PUSH_NULL
 #             128 LOAD_BUILD_CLASS
-#             130 LOAD_CONST               8 (<code object TestPowerFlowSkill at 0x73cd93b31730, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 64>)
+#             130 LOAD_CONST               8 (<code object TestPowerFlowPreset at 0x73cd93b31730, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 64>)
 #             132 MAKE_FUNCTION            0
-#             134 LOAD_CONST               9 ('TestPowerFlowSkill')
+#             134 LOAD_CONST               9 ('TestPowerFlowPreset')
 #             136 CALL                     2
-#             144 STORE_NAME              22 (TestPowerFlowSkill)
+#             144 STORE_NAME              22 (TestPowerFlowPreset)
 # 
 # 117         146 PUSH_NULL
 #             148 LOAD_BUILD_CLASS
-#             150 LOAD_CONST              10 (<code object TestPowerFlowSkillRun at 0x73cd93b44fa0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 117>)
+#             150 LOAD_CONST              10 (<code object TestPowerFlowPresetRun at 0x73cd93b44fa0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 117>)
 #             152 MAKE_FUNCTION            0
-#             154 LOAD_CONST              11 ('TestPowerFlowSkillRun')
+#             154 LOAD_CONST              11 ('TestPowerFlowPresetRun')
 #             156 CALL                     2
-#             164 STORE_NAME              23 (TestPowerFlowSkillRun)
+#             164 STORE_NAME              23 (TestPowerFlowPresetRun)
 # 
 # 164         166 PUSH_NULL
 #             168 LOAD_BUILD_CLASS
@@ -145,11 +145,11 @@ pass  # TODO: restore
 # 
 # 203         186 PUSH_NULL
 #             188 LOAD_BUILD_CLASS
-#             190 LOAD_CONST              14 (<code object TestPowerFlowSkillIntegration at 0x73cd945fedb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 203>)
+#             190 LOAD_CONST              14 (<code object TestPowerFlowPresetIntegration at 0x73cd945fedb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 203>)
 #             192 MAKE_FUNCTION            0
-#             194 LOAD_CONST              15 ('TestPowerFlowSkillIntegration')
+#             194 LOAD_CONST              15 ('TestPowerFlowPresetIntegration')
 #             196 CALL                     2
-#             204 STORE_NAME              25 (TestPowerFlowSkillIntegration)
+#             204 STORE_NAME              25 (TestPowerFlowPresetIntegration)
 #             206 RETURN_CONST             2 (None)
 # 
 # Disassembly of <code object MockPowerFlowAdapter at 0x73cd93b39c50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 15>:
@@ -161,7 +161,7 @@ pass  # TODO: restore
 #               8 LOAD_CONST               0 ('MockPowerFlowAdapter')
 #              10 STORE_NAME               2 (__qualname__)
 # 
-#  16          12 LOAD_CONST               1 ('Mock adapter for testing PowerFlowSkill.')
+#  16          12 LOAD_CONST               1 ('Mock adapter for testing PowerFlowPreset.')
 #              14 STORE_NAME               3 (__doc__)
 # 
 #  18          16 LOAD_CLOSURE             0 (__class__)
@@ -341,14 +341,14 @@ pass  # TODO: restore
 #              16 CALL                     1
 #              24 RETURN_VALUE
 # 
-# Disassembly of <code object TestPowerFlowSkill at 0x73cd93b31730, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 64>:
+# Disassembly of <code object TestPowerFlowPreset at 0x73cd93b31730, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 64>:
 #  64           0 RESUME                   0
 #               2 LOAD_NAME                0 (__name__)
 #               4 STORE_NAME               1 (__module__)
-#               6 LOAD_CONST               0 ('TestPowerFlowSkill')
+#               6 LOAD_CONST               0 ('TestPowerFlowPreset')
 #               8 STORE_NAME               2 (__qualname__)
 # 
-#  65          10 LOAD_CONST               1 ('Tests for PowerFlowSkill.')
+#  65          10 LOAD_CONST               1 ('Tests for PowerFlowPreset.')
 #              12 STORE_NAME               3 (__doc__)
 # 
 #  67          14 LOAD_CONST               2 (<code object test_create_skill at 0x3af3a3e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 67>)
@@ -387,7 +387,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_create_skill at 0x3af3a3e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 67>:
 #  67           0 RESUME                   0
 # 
-#  68           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  68           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 LOAD_CONST               1 ('cloudpss')
 #              14 KW_NAMES                 2 (('engine',))
 #              16 CALL                     1
@@ -545,7 +545,7 @@ pass  # TODO: restore
 # 
 #  74          26 LOAD_GLOBAL              3 (NULL + isinstance)
 #              36 LOAD_FAST                1 (skill)
-#              38 LOAD_GLOBAL              4 (PowerFlowSkill)
+#              38 LOAD_GLOBAL              4 (PowerFlowPreset)
 #              48 CALL                     2
 #              56 STORE_FAST               2 (@py_assert3)
 #              58 LOAD_FAST                2 (@py_assert3)
@@ -586,7 +586,7 @@ pass  # TODO: restore
 #             330 CALL                     1
 #             338 JUMP_FORWARD             1 (to 342)
 #         >>  340 LOAD_CONST               5 ('skill')
-#         >>  342 LOAD_CONST               6 ('PowerFlowSkill')
+#         >>  342 LOAD_CONST               6 ('PowerFlowPreset')
 #             344 LOAD_GLOBAL              7 (NULL + @py_builtins)
 #             354 LOAD_ATTR                8 (locals)
 #             374 CALL                     0
@@ -594,15 +594,15 @@ pass  # TODO: restore
 #             384 POP_JUMP_IF_TRUE        25 (to 436)
 #             386 LOAD_GLOBAL             11 (NULL + @pytest_ar)
 #             396 LOAD_ATTR               12 (_should_repr_global_name)
-#             416 LOAD_GLOBAL              4 (PowerFlowSkill)
+#             416 LOAD_GLOBAL              4 (PowerFlowPreset)
 #             426 CALL                     1
 #             434 POP_JUMP_IF_FALSE       25 (to 486)
 #         >>  436 LOAD_GLOBAL             11 (NULL + @pytest_ar)
 #             446 LOAD_ATTR               14 (_saferepr)
-#             466 LOAD_GLOBAL              4 (PowerFlowSkill)
+#             466 LOAD_GLOBAL              4 (PowerFlowPreset)
 #             476 CALL                     1
 #             484 JUMP_FORWARD             1 (to 488)
-#         >>  486 LOAD_CONST               6 ('PowerFlowSkill')
+#         >>  486 LOAD_CONST               6 ('PowerFlowPreset')
 #         >>  488 LOAD_GLOBAL             11 (NULL + @pytest_ar)
 #             498 LOAD_ATTR               14 (_saferepr)
 #             518 LOAD_FAST                2 (@py_assert3)
@@ -625,7 +625,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_default_config at 0x3afa5a90, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 76>:
 #  76           0 RESUME                   0
 # 
-#  77           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  77           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -868,7 +868,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_config_schema at 0x3afa0150, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 84>:
 #  84           0 RESUME                   0
 # 
-#  85           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  85           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1042,7 +1042,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 91>:
 #  91           0 RESUME                   0
 # 
-#  92           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  92           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1126,7 +1126,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa6030, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 97>:
 #  97           0 RESUME                   0
 # 
-#  98           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  98           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1294,7 +1294,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_rid at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 104>:
 # 104           0 RESUME                   0
 # 
-# 105           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 105           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1376,7 +1376,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_invalid_tolerance at 0x3af3fb70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 110>:
 # 110           0 RESUME                   0
 # 
-# 111           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 111           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1460,14 +1460,14 @@ pass  # TODO: restore
 #             408 STORE_FAST               5 (@py_assert2)
 #             410 RETURN_CONST             0 (None)
 # 
-# Disassembly of <code object TestPowerFlowSkillRun at 0x73cd93b44fa0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 117>:
+# Disassembly of <code object TestPowerFlowPresetRun at 0x73cd93b44fa0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 117>:
 # 117           0 RESUME                   0
 #               2 LOAD_NAME                0 (__name__)
 #               4 STORE_NAME               1 (__module__)
-#               6 LOAD_CONST               0 ('TestPowerFlowSkillRun')
+#               6 LOAD_CONST               0 ('TestPowerFlowPresetRun')
 #               8 STORE_NAME               2 (__qualname__)
 # 
-# 118          10 LOAD_CONST               1 ('Tests for PowerFlowSkill.run() with mocked adapter.')
+# 118          10 LOAD_CONST               1 ('Tests for PowerFlowPreset.run() with mocked adapter.')
 #              12 STORE_NAME               3 (__doc__)
 # 
 # 120          14 LOAD_NAME                4 (pytest)
@@ -1482,7 +1482,7 @@ pass  # TODO: restore
 # 
 # 126          50 PUSH_NULL
 #              52 LOAD_NAME                7 (patch)
-#              54 LOAD_CONST               3 ('cloudpss_skills_v2.skills.power_flow.APIFactory')
+#              54 LOAD_CONST               3 ('cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory')
 #              56 CALL                     1
 # 
 # 127          64 LOAD_CONST               4 (<code object test_run_success at 0x3af9df30, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 126>)
@@ -1494,7 +1494,7 @@ pass  # TODO: restore
 # 
 # 154          78 PUSH_NULL
 #              80 LOAD_NAME                7 (patch)
-#              82 LOAD_CONST               3 ('cloudpss_skills_v2.skills.power_flow.APIFactory')
+#              82 LOAD_CONST               3 ('cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory')
 #              84 CALL                     1
 # 
 # 155          92 LOAD_CONST               5 (<code object test_run_validation_failure at 0x3af9e5f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 154>)
@@ -1508,7 +1508,7 @@ pass  # TODO: restore
 # Disassembly of <code object skill_with_mock at 0x73cd945fe870, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 120>:
 # 120           0 RESUME                   0
 # 
-# 123           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 123           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 LOAD_CONST               1 ('mock')
 #              14 KW_NAMES                 2 (('engine',))
 #              16 CALL                     1
@@ -2026,7 +2026,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_summary_basic at 0x3afa7720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 167>:
 # 167           0 RESUME                   0
 # 
-# 168           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 168           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2405,7 +2405,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_summary_empty at 0x3af9ce50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 187>:
 # 187           0 RESUME                   0
 # 
-# 188           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 188           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2532,7 +2532,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_summary_null_values at 0x3af96120, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 193>:
 # 193           0 RESUME                   0
 # 
-# 194           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 194           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2665,11 +2665,11 @@ pass  # TODO: restore
 #             594 STORE_FAST               5 (@py_assert3)
 #             596 RETURN_CONST             0 (None)
 # 
-# Disassembly of <code object TestPowerFlowSkillIntegration at 0x73cd945fedb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 203>:
+# Disassembly of <code object TestPowerFlowPresetIntegration at 0x73cd945fedb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 203>:
 # 203           0 RESUME                   0
 #               2 LOAD_NAME                0 (__name__)
 #               4 STORE_NAME               1 (__module__)
-#               6 LOAD_CONST               0 ('TestPowerFlowSkillIntegration')
+#               6 LOAD_CONST               0 ('TestPowerFlowPresetIntegration')
 #               8 STORE_NAME               2 (__qualname__)
 # 
 # 204          10 LOAD_CONST               1 ('Integration-style tests (no real API calls).')
@@ -2687,7 +2687,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_skill_interface_complete at 0x3afa9880, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 206>:
 # 206           0 RESUME                   0
 # 
-# 208           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 208           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3171,7 +3171,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_skill_config_backward_compatible at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/skills/test_power_flow.py", line 218>:
 # 218           0 RESUME                   0
 # 
-# 220           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 220           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

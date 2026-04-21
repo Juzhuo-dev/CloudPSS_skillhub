@@ -28,7 +28,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for AutoChannelSetupSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for AutoChannelSetupTool v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -50,10 +50,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('AutoChannelSetupSkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.auto_channel_setup)
-#              46 IMPORT_FROM              9 (AutoChannelSetupSkill)
-#              48 STORE_NAME               9 (AutoChannelSetupSkill)
+#              42 LOAD_CONST               3 (('AutoChannelSetupTool',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.tools.auto_channel_setup)
+#              46 IMPORT_FROM              9 (AutoChannelSetupTool)
+#              48 STORE_NAME               9 (AutoChannelSetupTool)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -112,7 +112,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -195,7 +195,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_no_measurements at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -277,7 +277,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af3fb70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 18>:
 #  18           0 RESUME                   0
 # 
-#  19           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  19           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -392,7 +392,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_voltage_channel at 0x3afa4b40, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 29>:
 #  29           0 RESUME                   0
 # 
-#  30           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  30           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -571,7 +571,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_current_channel at 0x3afa4f50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 36>:
 #  36           0 RESUME                   0
 # 
-#  37           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  37           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -696,7 +696,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_power_channel at 0x3af9ce50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 42>:
 #  42           0 RESUME                   0
 # 
-#  43           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  43           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -821,7 +821,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_frequency_channel at 0x3af909c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 48>:
 #  48           0 RESUME                   0
 # 
-#  49           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  49           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -961,7 +961,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_group_channels_by_type at 0x3aef1020, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 56>:
 #  56           0 RESUME                   0
 # 
-#  57           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  57           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1104,7 +1104,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_output_config at 0x3af9a920, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 67>:
 #  67           0 RESUME                   0
 # 
-#  68           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  68           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1289,7 +1289,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3afa4860, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_auto_channel_setup.py", line 79>:
 #  79           0 RESUME                   0
 # 
-#  80           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupSkill)
+#  80           2 LOAD_GLOBAL              1 (NULL + AutoChannelSetupTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

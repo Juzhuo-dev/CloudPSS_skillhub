@@ -33,7 +33,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for N2SecuritySkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for N2SecurityAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -55,10 +55,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('N2SecuritySkill', 'N2ContingencyResult'))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.n2_security)
-#              46 IMPORT_FROM              9 (N2SecuritySkill)
-#              48 STORE_NAME               9 (N2SecuritySkill)
+#              42 LOAD_CONST               3 (('N2SecurityAnalysis', 'N2ContingencyResult'))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.poweranalysis.n2_security)
+#              46 IMPORT_FROM              9 (N2SecurityAnalysis)
+#              48 STORE_NAME               9 (N2SecurityAnalysis)
 #              50 IMPORT_FROM             10 (N2ContingencyResult)
 #              52 STORE_NAME              10 (N2ContingencyResult)
 #              54 POP_TOP
@@ -127,7 +127,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -204,7 +204,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_voltage_range_invalid at 0x3afa5260, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -369,7 +369,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 23>:
 #  23           0 RESUME                   0
 # 
-#  24           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  24           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -479,7 +479,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_n2_scenarios_from_branches at 0x3afa0aa0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 34>:
 #  34           0 RESUME                   0
 # 
-#  35           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  35           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -605,7 +605,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_n2_scenarios_with_limit at 0x3af3a2f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 45>:
 #  45           0 RESUME                   0
 # 
-#  46           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  46           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -744,7 +744,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_n2_scenarios_with_pairs at 0x3afa23c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 51>:
 #  51           0 RESUME                   0
 # 
-#  52           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  52           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -885,7 +885,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_voltage_violation_clean at 0x3af9c2b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 61>:
 #  61           0 RESUME                   0
 # 
-#  62           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  62           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1091,7 +1091,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_voltage_violation_over at 0x3afa6250, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 70>:
 #  70           0 RESUME                   0
 # 
-#  71           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  71           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1252,7 +1252,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_thermal_loading_over at 0x3afa8100, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 76>:
 #  76           0 RESUME                   0
 # 
-#  77           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+#  77           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1729,7 +1729,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af8f430, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_n2_security.py", line 100>:
 # 100           0 RESUME                   0
 # 
-# 101           2 LOAD_GLOBAL              1 (NULL + N2SecuritySkill)
+# 101           2 LOAD_GLOBAL              1 (NULL + N2SecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

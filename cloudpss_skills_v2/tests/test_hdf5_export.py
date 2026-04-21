@@ -28,7 +28,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for HDF5ExportSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for HDF5ExportTool v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -77,10 +77,10 @@ pass  # TODO: restore
 #              82 STORE_NAME              14 (pytest)
 # 
 #  10          84 LOAD_CONST               1 (0)
-#              86 LOAD_CONST               4 (('HDF5ExportSkill',))
-#              88 IMPORT_NAME             15 (cloudpss_skills_v2.skills.hdf5_export)
-#              90 IMPORT_FROM             16 (HDF5ExportSkill)
-#              92 STORE_NAME              16 (HDF5ExportSkill)
+#              86 LOAD_CONST               4 (('HDF5ExportTool',))
+#              88 IMPORT_NAME             15 (cloudpss_skills_v2.tools.hdf5_export)
+#              90 IMPORT_FROM             16 (HDF5ExportTool)
+#              92 STORE_NAME              16 (HDF5ExportTool)
 #              94 POP_TOP
 # 
 #  13          96 PUSH_NULL
@@ -139,7 +139,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_source at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 14>:
 #  14           0 RESUME                   0
 # 
-#  15           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  15           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -216,7 +216,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_file_type_missing_path at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 19>:
 #  19           0 RESUME                   0
 # 
-#  20           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  20           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -297,7 +297,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3ae632d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 24>:
 #  24           0 RESUME                   0
 # 
-#  25           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  25           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -397,7 +397,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_export_to_hdf5 at 0x3afa7720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 32>:
 #  32           0 RESUME                   0
 # 
-#  33           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  33           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -674,7 +674,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_create_index at 0x3af9c2b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 44>:
 #  44           0 RESUME                   0
 # 
-#  45           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  45           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -967,7 +967,7 @@ pass  # TODO: restore
 #             234 CALL                     2
 #             242 POP_TOP
 # 
-#  62     >>  244 LOAD_GLOBAL             19 (NULL + HDF5ExportSkill)
+#  62     >>  244 LOAD_GLOBAL             19 (NULL + HDF5ExportTool)
 #             254 LOAD_ATTR               20 (read_hdf5)
 #             274 LOAD_GLOBAL             23 (NULL + str)
 #             284 LOAD_FAST                2 (hdf5_path)
@@ -1142,7 +1142,7 @@ pass  # TODO: restore
 #             238 CALL                     2
 #             246 POP_TOP
 # 
-#  73     >>  248 LOAD_GLOBAL             15 (NULL + HDF5ExportSkill)
+#  73     >>  248 LOAD_GLOBAL             15 (NULL + HDF5ExportTool)
 #             258 LOAD_ATTR               16 (list_datasets)
 #             278 LOAD_GLOBAL             19 (NULL + str)
 #             288 LOAD_FAST                2 (hdf5_path)
@@ -1332,7 +1332,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af9ee00, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 79>:
 #  79           0 RESUME                   0
 # 
-#  80           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  80           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1427,7 +1427,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_file_export at 0x3afa9110, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_hdf5_export.py", line 84>:
 #  84           0 RESUME                   0
 # 
-#  85           2 LOAD_GLOBAL              1 (NULL + HDF5ExportSkill)
+#  85           2 LOAD_GLOBAL              1 (NULL + HDF5ExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

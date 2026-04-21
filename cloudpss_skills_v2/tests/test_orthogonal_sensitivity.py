@@ -43,7 +43,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for OrthogonalSensitivitySkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for OrthogonalSensitivityAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -65,10 +65,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('OrthogonalSensitivitySkill', 'ParameterLevel', 'SensitivityResult', 'ORTHOGONAL_TABLES'))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.orthogonal_sensitivity)
-#              46 IMPORT_FROM              9 (OrthogonalSensitivitySkill)
-#              48 STORE_NAME               9 (OrthogonalSensitivitySkill)
+#              42 LOAD_CONST               3 (('OrthogonalSensitivityAnalysis', 'ParameterLevel', 'SensitivityResult', 'ORTHOGONAL_TABLES'))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.poweranalysis.orthogonal_sensitivity)
+#              46 IMPORT_FROM              9 (OrthogonalSensitivityAnalysis)
+#              48 STORE_NAME               9 (OrthogonalSensitivityAnalysis)
 #              50 IMPORT_FROM             10 (ParameterLevel)
 #              52 STORE_NAME              10 (ParameterLevel)
 #              54 IMPORT_FROM             11 (SensitivityResult)
@@ -161,7 +161,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -253,7 +253,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_no_parameters at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 23>:
 #  23           0 RESUME                   0
 # 
-#  24           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  24           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -339,7 +339,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_parameter_missing_levels at 0x3af3fb70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 30>:
 #  30           0 RESUME                   0
 # 
-#  31           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  31           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -432,7 +432,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af937b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 41>:
 #  41           0 RESUME                   0
 # 
-#  42           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  42           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -549,7 +549,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_select_orthogonal_table_auto_2level at 0x3af97180, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 53>:
 #  53           0 RESUME                   0
 # 
-#  54           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  54           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -649,7 +649,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_select_orthogonal_table_auto_3level at 0x3af9b370, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 63>:
 #  63           0 RESUME                   0
 # 
-#  64           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  64           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -755,7 +755,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_select_orthogonal_table_explicit at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 69>:
 #  69           0 RESUME                   0
 # 
-#  70           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  70           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -852,7 +852,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_run_matrix at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 77>:
 #  77           0 RESUME                   0
 # 
-#  78           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  78           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1216,7 +1216,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_sensitivity at 0x3afaa120, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 92>:
 #  92           0 RESUME                   0
 # 
-#  93           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+#  93           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1650,7 +1650,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_sensitivity_no_success at 0x3afad0d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 128>:
 # 128           0 RESUME                   0
 # 
-# 129           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+# 129           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2461,7 +2461,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af9ee00, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_orthogonal_sensitivity.py", line 158>:
 # 158           0 RESUME                   0
 # 
-# 159           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+# 159           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

@@ -33,7 +33,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for EmtN1ScreeningSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for EmtN1ScreeningAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -55,10 +55,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('EmtN1ScreeningSkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.emt_n1_screening)
-#              46 IMPORT_FROM              9 (EmtN1ScreeningSkill)
-#              48 STORE_NAME               9 (EmtN1ScreeningSkill)
+#              42 LOAD_CONST               3 (('EmtN1ScreeningAnalysis',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.poweranalysis.emt_n1_screening)
+#              46 IMPORT_FROM              9 (EmtN1ScreeningAnalysis)
+#              48 STORE_NAME               9 (EmtN1ScreeningAnalysis)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -121,7 +121,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -198,7 +198,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -302,7 +302,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_level_critical at 0x3aef1020, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 21>:
 #  21           0 RESUME                   0
 # 
-#  22           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  22           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -424,7 +424,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_level_warning at 0x3aef7030, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 26>:
 #  26           0 RESUME                   0
 # 
-#  27           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  27           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -546,7 +546,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_level_observe at 0x3aec4850, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 31>:
 #  31           0 RESUME                   0
 # 
-#  32           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  32           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -684,7 +684,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_postfault_gap at 0x3aea30a0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 38>:
 #  38           0 RESUME                   0
 # 
-#  39           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  39           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -803,7 +803,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_postfault_gap_no_drop at 0x3ae632d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 43>:
 #  43           0 RESUME                   0
 # 
-#  44           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  44           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -896,7 +896,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_rank_results at 0x3af9c2b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 50>:
 #  50           0 RESUME                   0
 # 
-#  51           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  51           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1271,7 +1271,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_build_digest at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 66>:
 #  66           0 RESUME                   0
 # 
-#  67           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  67           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1544,7 +1544,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3afa13e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_emt_n1_screening.py", line 83>:
 #  83           0 RESUME                   0
 # 
-#  84           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningSkill)
+#  84           2 LOAD_GLOBAL              1 (NULL + EmtN1ScreeningAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

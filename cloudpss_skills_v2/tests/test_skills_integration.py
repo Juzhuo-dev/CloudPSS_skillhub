@@ -4,8 +4,8 @@
 # The structure is accurate but implementation details may need manual review.
 
 
-def TestPowerFlowSkillIntegration():
-    """TestPowerFlowSkillIntegration"""
+def TestPowerFlowPresetIntegration():
+    """TestPowerFlowPresetIntegration"""
 pass  # TODO: restore
 
 
@@ -14,8 +14,8 @@ def TestEMTSkillIntegration():
 pass  # TODO: restore
 
 
-def TestShortCircuitSkillIntegration():
-    """TestShortCircuitSkillIntegration"""
+def TestShortCircuitAnalysisIntegration():
+    """TestShortCircuitAnalysisIntegration"""
 pass  # TODO: restore
 
 
@@ -69,14 +69,14 @@ pass  # TODO: restore
 #              54 POP_TOP
 # 
 #   5          56 LOAD_CONST               1 (0)
-#              58 LOAD_CONST               4 (('PowerFlowSkill', 'EMTSimulationSkill', 'ShortCircuitSkill'))
+#              58 LOAD_CONST               4 (('PowerFlowPreset', 'EMTPreset', 'ShortCircuitAnalysis'))
 #              60 IMPORT_NAME             11 (cloudpss_skills_v2.skills)
-#              62 IMPORT_FROM             12 (PowerFlowSkill)
-#              64 STORE_NAME              12 (PowerFlowSkill)
-#              66 IMPORT_FROM             13 (EMTSimulationSkill)
-#              68 STORE_NAME              13 (EMTSimulationSkill)
-#              70 IMPORT_FROM             14 (ShortCircuitSkill)
-#              72 STORE_NAME              14 (ShortCircuitSkill)
+#              62 IMPORT_FROM             12 (PowerFlowPreset)
+#              64 STORE_NAME              12 (PowerFlowPreset)
+#              66 IMPORT_FROM             13 (EMTPreset)
+#              68 STORE_NAME              13 (EMTPreset)
+#              70 IMPORT_FROM             14 (ShortCircuitAnalysis)
+#              72 STORE_NAME              14 (ShortCircuitAnalysis)
 #              74 POP_TOP
 # 
 #  10          76 LOAD_CONST               1 (0)
@@ -101,11 +101,11 @@ pass  # TODO: restore
 # 
 #  14         112 PUSH_NULL
 #             114 LOAD_BUILD_CLASS
-#             116 LOAD_CONST               7 (<code object TestPowerFlowSkillIntegration at 0x73cd93b06880, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 14>)
+#             116 LOAD_CONST               7 (<code object TestPowerFlowPresetIntegration at 0x73cd93b06880, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 14>)
 #             118 MAKE_FUNCTION            0
-#             120 LOAD_CONST               8 ('TestPowerFlowSkillIntegration')
+#             120 LOAD_CONST               8 ('TestPowerFlowPresetIntegration')
 #             122 CALL                     2
-#             130 STORE_NAME              22 (TestPowerFlowSkillIntegration)
+#             130 STORE_NAME              22 (TestPowerFlowPresetIntegration)
 # 
 #  40         132 PUSH_NULL
 #             134 LOAD_BUILD_CLASS
@@ -117,11 +117,11 @@ pass  # TODO: restore
 # 
 #  68         152 PUSH_NULL
 #             154 LOAD_BUILD_CLASS
-#             156 LOAD_CONST              11 (<code object TestShortCircuitSkillIntegration at 0x73cd93b06790, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 68>)
+#             156 LOAD_CONST              11 (<code object TestShortCircuitAnalysisIntegration at 0x73cd93b06790, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 68>)
 #             158 MAKE_FUNCTION            0
-#             160 LOAD_CONST              12 ('TestShortCircuitSkillIntegration')
+#             160 LOAD_CONST              12 ('TestShortCircuitAnalysisIntegration')
 #             162 CALL                     2
-#             170 STORE_NAME              24 (TestShortCircuitSkillIntegration)
+#             170 STORE_NAME              24 (TestShortCircuitAnalysisIntegration)
 # 
 #  96         172 PUSH_NULL
 #             174 LOAD_BUILD_CLASS
@@ -148,14 +148,14 @@ pass  # TODO: restore
 #             230 STORE_NAME              27 (TestSkillResultToDict)
 #             232 RETURN_CONST             2 (None)
 # 
-# Disassembly of <code object TestPowerFlowSkillIntegration at 0x73cd93b06880, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 14>:
+# Disassembly of <code object TestPowerFlowPresetIntegration at 0x73cd93b06880, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 14>:
 #  14           0 RESUME                   0
 #               2 LOAD_NAME                0 (__name__)
 #               4 STORE_NAME               1 (__module__)
-#               6 LOAD_CONST               0 ('TestPowerFlowSkillIntegration')
+#               6 LOAD_CONST               0 ('TestPowerFlowPresetIntegration')
 #               8 STORE_NAME               2 (__qualname__)
 # 
-#  15          10 LOAD_CONST               1 ('Integration tests for PowerFlowSkill.')
+#  15          10 LOAD_CONST               1 ('Integration tests for PowerFlowPreset.')
 #              12 STORE_NAME               3 (__doc__)
 # 
 #  17          14 LOAD_CONST               2 (<code object test_run_returns_skill_result at 0x3aefe140, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 17>)
@@ -178,7 +178,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_returns_skill_result at 0x3aefe140, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 17>:
 #  17           0 RESUME                   0
 # 
-#  18           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  18           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -254,7 +254,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 21>:
 #  21           0 RESUME                   0
 # 
-#  22           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  22           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -419,7 +419,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af3fb70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 27>:
 #  27           0 RESUME                   0
 # 
-#  28           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  28           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -506,7 +506,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_invalid_tolerance at 0x3afad0d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 33>:
 #  33           0 RESUME                   0
 # 
-#  34           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+#  34           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -597,7 +597,7 @@ pass  # TODO: restore
 #               6 LOAD_CONST               0 ('TestEMTSkillIntegration')
 #               8 STORE_NAME               2 (__qualname__)
 # 
-#  41          10 LOAD_CONST               1 ('Integration tests for EMTSimulationSkill.')
+#  41          10 LOAD_CONST               1 ('Integration tests for EMTPreset.')
 #              12 STORE_NAME               3 (__doc__)
 # 
 #  43          14 LOAD_CONST               2 (<code object test_run_returns_skill_result at 0x3aefd020, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 43>)
@@ -620,7 +620,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_returns_skill_result at 0x3aefd020, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 43>:
 #  43           0 RESUME                   0
 # 
-#  44           2 LOAD_GLOBAL              1 (NULL + EMTSimulationSkill)
+#  44           2 LOAD_GLOBAL              1 (NULL + EMTPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -696,7 +696,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 47>:
 #  47           0 RESUME                   0
 # 
-#  48           2 LOAD_GLOBAL              1 (NULL + EMTSimulationSkill)
+#  48           2 LOAD_GLOBAL              1 (NULL + EMTPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -773,7 +773,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 52>:
 #  52           0 RESUME                   0
 # 
-#  53           2 LOAD_GLOBAL              1 (NULL + EMTSimulationSkill)
+#  53           2 LOAD_GLOBAL              1 (NULL + EMTPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -863,7 +863,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_invalid_time_step at 0x3af94a10, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 61>:
 #  61           0 RESUME                   0
 # 
-#  62           2 LOAD_GLOBAL              1 (NULL + EMTSimulationSkill)
+#  62           2 LOAD_GLOBAL              1 (NULL + EMTPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -947,14 +947,14 @@ pass  # TODO: restore
 #             408 STORE_FAST               5 (@py_assert2)
 #             410 RETURN_CONST             0 (None)
 # 
-# Disassembly of <code object TestShortCircuitSkillIntegration at 0x73cd93b06790, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 68>:
+# Disassembly of <code object TestShortCircuitAnalysisIntegration at 0x73cd93b06790, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 68>:
 #  68           0 RESUME                   0
 #               2 LOAD_NAME                0 (__name__)
 #               4 STORE_NAME               1 (__module__)
-#               6 LOAD_CONST               0 ('TestShortCircuitSkillIntegration')
+#               6 LOAD_CONST               0 ('TestShortCircuitAnalysisIntegration')
 #               8 STORE_NAME               2 (__qualname__)
 # 
-#  69          10 LOAD_CONST               1 ('Integration tests for ShortCircuitSkill.')
+#  69          10 LOAD_CONST               1 ('Integration tests for ShortCircuitAnalysis.')
 #              12 STORE_NAME               3 (__doc__)
 # 
 #  71          14 LOAD_CONST               2 (<code object test_run_returns_skill_result at 0x3af1c4d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 71>)
@@ -977,7 +977,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_returns_skill_result at 0x3af1c4d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 71>:
 #  71           0 RESUME                   0
 # 
-#  72           2 LOAD_GLOBAL              1 (NULL + ShortCircuitSkill)
+#  72           2 LOAD_GLOBAL              1 (NULL + ShortCircuitAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1053,7 +1053,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 75>:
 #  75           0 RESUME                   0
 # 
-#  76           2 LOAD_GLOBAL              1 (NULL + ShortCircuitSkill)
+#  76           2 LOAD_GLOBAL              1 (NULL + ShortCircuitAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1130,7 +1130,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3aefb4d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 80>:
 #  80           0 RESUME                   0
 # 
-#  81           2 LOAD_GLOBAL              1 (NULL + ShortCircuitSkill)
+#  81           2 LOAD_GLOBAL              1 (NULL + ShortCircuitAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1220,7 +1220,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_invalid_impedance at 0x3afa7ad0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 89>:
 #  89           0 RESUME                   0
 # 
-#  90           2 LOAD_GLOBAL              1 (NULL + ShortCircuitSkill)
+#  90           2 LOAD_GLOBAL              1 (NULL + ShortCircuitAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1316,7 +1316,7 @@ pass  # TODO: restore
 # 
 #  99          14 PUSH_NULL
 #              16 LOAD_NAME                4 (patch)
-#              18 LOAD_CONST               2 ('cloudpss_skills_v2.skills.power_flow.APIFactory')
+#              18 LOAD_CONST               2 ('cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory')
 #              20 CALL                     1
 # 
 # 100          28 LOAD_CONST               3 (<code object test_power_flow_failure_includes_error at 0x3afa6250, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 99>)
@@ -1328,7 +1328,7 @@ pass  # TODO: restore
 # 
 # 108          42 PUSH_NULL
 #              44 LOAD_NAME                4 (patch)
-#              46 LOAD_CONST               4 ('cloudpss_skills_v2.skills.emt_simulation.APIFactory')
+#              46 LOAD_CONST               4 ('cloudpss_skills_v2.powerskill.presets.emt_simulation.APIFactory')
 #              48 CALL                     1
 # 
 # 109          56 LOAD_CONST               5 (<code object test_emt_failure_includes_error at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 108>)
@@ -1340,7 +1340,7 @@ pass  # TODO: restore
 # 
 # 116          70 PUSH_NULL
 #              72 LOAD_NAME                4 (patch)
-#              74 LOAD_CONST               6 ('cloudpss_skills_v2.skills.short_circuit.APIFactory')
+#              74 LOAD_CONST               6 ('cloudpss_skills_v2.poweranalysis.short_circuit.APIFactory')
 #              76 CALL                     1
 # 
 # 117          84 LOAD_CONST               7 (<code object test_short_circuit_failure_includes_error at 0x3afa8540, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 116>)
@@ -1354,7 +1354,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_power_flow_failure_includes_error at 0x3afa6250, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 99>:
 #  99           0 RESUME                   0
 # 
-# 101           2 LOAD_GLOBAL              1 (NULL + PowerFlowSkill)
+# 101           2 LOAD_GLOBAL              1 (NULL + PowerFlowPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               2 (skill)
 # 
@@ -1601,7 +1601,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_emt_failure_includes_error at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 108>:
 # 108           0 RESUME                   0
 # 
-# 110           2 LOAD_GLOBAL              1 (NULL + EMTSimulationSkill)
+# 110           2 LOAD_GLOBAL              1 (NULL + EMTPreset)
 #              12 CALL                     0
 #              20 STORE_FAST               2 (skill)
 # 
@@ -1778,7 +1778,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_short_circuit_failure_includes_error at 0x3afa8540, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skills_integration.py", line 116>:
 # 116           0 RESUME                   0
 # 
-# 118           2 LOAD_GLOBAL              1 (NULL + ShortCircuitSkill)
+# 118           2 LOAD_GLOBAL              1 (NULL + ShortCircuitAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               2 (skill)
 # 

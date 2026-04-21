@@ -33,7 +33,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for MaintenanceSecuritySkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for MaintenanceSecurityAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -55,10 +55,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('MaintenanceSecuritySkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.maintenance_security)
-#              46 IMPORT_FROM              9 (MaintenanceSecuritySkill)
-#              48 STORE_NAME               9 (MaintenanceSecuritySkill)
+#              42 LOAD_CONST               3 (('MaintenanceSecurityAnalysis',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.poweranalysis.maintenance_security)
+#              46 IMPORT_FROM              9 (MaintenanceSecurityAnalysis)
+#              48 STORE_NAME               9 (MaintenanceSecurityAnalysis)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -125,7 +125,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -206,7 +206,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_branch_id at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -287,7 +287,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 18>:
 #  18           0 RESUME                   0
 # 
-#  19           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  19           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -402,7 +402,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_classify_severity_critical at 0x3afa4f50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 26>:
 #  26           0 RESUME                   0
 # 
-#  27           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  27           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -509,7 +509,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_classify_severity_warning at 0x3af9ce50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 30>:
 #  30           0 RESUME                   0
 # 
-#  31           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  31           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -616,7 +616,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_classify_severity_normal at 0x3aee3ab0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 34>:
 #  34           0 RESUME                   0
 # 
-#  35           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  35           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -723,7 +723,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_classify_severity_overload_critical at 0x3af909c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 38>:
 #  38           0 RESUME                   0
 # 
-#  39           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  39           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -830,7 +830,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_classify_severity_overload_warning at 0x3aefddd0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 42>:
 #  42           0 RESUME                   0
 # 
-#  43           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  43           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -961,7 +961,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_apparent_power at 0x3afa13e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 48>:
 #  48           0 RESUME                   0
 # 
-#  49           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  49           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1080,7 +1080,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_branch_loading at 0x3aec4850, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 53>:
 #  53           0 RESUME                   0
 # 
-#  54           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  54           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1199,7 +1199,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_branch_loading_zero_rating at 0x3ae632d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 58>:
 #  58           0 RESUME                   0
 # 
-#  59           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  59           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1276,7 +1276,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_rating_from_irated at 0x3af9f150, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 63>:
 #  63           0 RESUME                   0
 # 
-#  64           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  64           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1419,7 +1419,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_residual_n1_plan at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 71>:
 #  71           0 RESUME                   0
 # 
-#  72           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  72           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1600,7 +1600,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af9ee00, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_maintenance_security.py", line 80>:
 #  80           0 RESUME                   0
 # 
-#  81           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+#  81           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

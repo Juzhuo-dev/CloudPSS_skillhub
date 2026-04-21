@@ -1,4 +1,4 @@
-"""Tests for v2 skills: PowerFlowSkill, EMTSimulationSkill, N1SecuritySkill."""
+"""Tests for v2 skills: PowerFlowPreset, EMTPreset, N1SecurityAnalysis."""
 
 import json
 import pytest
@@ -8,44 +8,44 @@ import tempfile
 import os
 
 from cloudpss_skills_v2.core.skill_result import SkillResult, SkillStatus
-from cloudpss_skills_v2.skills.power_flow import PowerFlowSkill
-from cloudpss_skills_v2.skills.emt_simulation import EMTSimulationSkill
-from cloudpss_skills_v2.skills.n1_security import N1SecuritySkill
+from cloudpss_skills_v2.powerskill.presets.power_flow import PowerFlowPreset
+from cloudpss_skills_v2.powerskill.presets.emt_simulation import EMTPreset
+from cloudpss_skills_v2.poweranalysis.n1_security import N1SecurityAnalysis
 
 
-class TestPowerFlowSkill:
+class TestPowerFlowPreset:
     def test_name_and_description(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         assert skill.name == "power_flow"
         assert "潮流" in skill.description
 
     def test_default_config(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         config = skill.get_default_config()
         assert config["skill"] == "power_flow"
         assert "model" in config
         assert "algorithm" in config
 
     def test_config_schema(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         schema = skill.config_schema
         assert schema["required"] == ["skill", "model"]
         assert "engine" in schema["properties"]
 
     def test_validate_missing_rid(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         valid, errors = skill.validate({"auth": {"token": "test"}})
         assert not valid
         assert any("model.rid" in e for e in errors)
 
     def test_validate_missing_auth(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         valid, errors = skill.validate({"model": {"rid": "test"}})
         assert not valid
         assert any("auth" in e for e in errors)
 
     def test_validate_valid_config(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         valid, errors = skill.validate(
             {
                 "model": {"rid": "model/test/IEEE39"},
@@ -56,12 +56,12 @@ class TestPowerFlowSkill:
         assert errors == []
 
     def test_run_validation_failure(self):
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED
         assert result.error is not None
 
-    @patch("cloudpss_skills_v2.skills.power_flow.APIFactory")
+    @patch("cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory")
     def test_run_success(self, mock_factory_cls):
         mock_api = MagicMock()
         mock_api.adapter.engine_name = "cloudpss"
@@ -78,7 +78,7 @@ class TestPowerFlowSkill:
         mock_factory_cls.create_powerflow_api.return_value = mock_api
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            skill = PowerFlowSkill()
+            skill = PowerFlowPreset()
             result = skill.run(
                 {
                     "model": {"rid": "model/test/IEEE39"},
@@ -92,7 +92,7 @@ class TestPowerFlowSkill:
             assert result.data["branch_count"] == 1
             assert len(result.artifacts) >= 1
 
-    @patch("cloudpss_skills_v2.skills.power_flow.APIFactory")
+    @patch("cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory")
     def test_run_simulation_failure(self, mock_factory_cls):
         mock_api = MagicMock()
         mock_api.adapter.engine_name = "cloudpss"
@@ -102,7 +102,7 @@ class TestPowerFlowSkill:
         )
         mock_factory_cls.create_powerflow_api.return_value = mock_api
 
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         result = skill.run(
             {
                 "model": {"rid": "model/test/IEEE39"},
@@ -111,7 +111,7 @@ class TestPowerFlowSkill:
         )
         assert result.status == SkillStatus.FAILED
 
-    @patch("cloudpss_skills_v2.skills.power_flow.APIFactory")
+    @patch("cloudpss_skills_v2.powerskill.presets.power_flow.APIFactory")
     def test_run_empty_result(self, mock_factory_cls):
         mock_api = MagicMock()
         mock_api.adapter.engine_name = "cloudpss"
@@ -121,7 +121,7 @@ class TestPowerFlowSkill:
         )
         mock_factory_cls.create_powerflow_api.return_value = mock_api
 
-        skill = PowerFlowSkill()
+        skill = PowerFlowPreset()
         result = skill.run(
             {
                 "model": {"rid": "model/test/IEEE39"},
@@ -131,19 +131,19 @@ class TestPowerFlowSkill:
         assert result.status == SkillStatus.FAILED
 
 
-class TestEMTSimulationSkill:
+class TestEMTPreset:
     def test_name_and_description(self):
-        skill = EMTSimulationSkill()
+        skill = EMTPreset()
         assert skill.name == "emt_simulation"
         assert "EMT" in skill.description
 
     def test_validate_missing_rid(self):
-        skill = EMTSimulationSkill()
+        skill = EMTPreset()
         valid, errors = skill.validate({"auth": {"token": "test"}})
         assert not valid
 
     def test_validate_negative_duration(self):
-        skill = EMTSimulationSkill()
+        skill = EMTPreset()
         valid, errors = skill.validate(
             {
                 "model": {"rid": "test"},
@@ -154,7 +154,7 @@ class TestEMTSimulationSkill:
         assert not valid
 
     def test_validate_valid(self):
-        skill = EMTSimulationSkill()
+        skill = EMTPreset()
         valid, errors = skill.validate(
             {
                 "model": {"rid": "model/test/IEEE3"},
@@ -163,7 +163,7 @@ class TestEMTSimulationSkill:
         )
         assert valid
 
-    @patch("cloudpss_skills_v2.skills.emt_simulation.APIFactory")
+    @patch("cloudpss_skills_v2.powerskill.presets.emt_simulation.APIFactory")
     def test_run_success(self, mock_factory_cls):
         mock_api = MagicMock()
         mock_api.adapter.engine_name = "cloudpss_emt"
@@ -192,7 +192,7 @@ class TestEMTSimulationSkill:
         mock_factory_cls.create_emt_api.return_value = mock_api
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            skill = EMTSimulationSkill()
+            skill = EMTPreset()
             result = skill.run(
                 {
                     "model": {"rid": "model/test/IEEE3"},
@@ -205,19 +205,19 @@ class TestEMTSimulationSkill:
             assert result.metrics["plot_count"] == 1
 
 
-class TestN1SecuritySkill:
+class TestN1SecurityAnalysis:
     def test_name_and_description(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         assert skill.name == "n1_security"
         assert "N-1" in skill.description
 
     def test_validate_missing_rid(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         valid, errors = skill.validate({})
         assert not valid
 
     def test_validate_valid(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         valid, errors = skill.validate(
             {
                 "model": {"rid": "model/test/IEEE39"},
@@ -227,30 +227,30 @@ class TestN1SecuritySkill:
         assert valid
 
     def test_summarize_violations_empty(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         assert skill._summarize_violations([]) is None
 
     def test_summarize_violations_voltage_only(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         violations = [{"type": "voltage", "message": "low voltage"}]
         summary = skill._summarize_violations(violations)
         assert summary["severity"] == "low"
         assert summary["voltage_violations"] == 1
 
     def test_summarize_violations_thermal_only(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         violations = [{"type": "thermal", "message": "overload"}]
         summary = skill._summarize_violations(violations)
         assert summary["severity"] == "medium"
 
     def test_summarize_violations_convergence(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         violations = [{"type": "convergence", "message": "did not converge"}]
         summary = skill._summarize_violations(violations)
         assert summary["severity"] == "critical"
 
     def test_summarize_violations_mixed(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         violations = [
             {"type": "voltage", "message": "low"},
             {"type": "thermal", "message": "overload"},
@@ -259,6 +259,6 @@ class TestN1SecuritySkill:
         assert summary["severity"] == "high"
 
     def test_run_validation_failure(self):
-        skill = N1SecuritySkill()
+        skill = N1SecurityAnalysis()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED

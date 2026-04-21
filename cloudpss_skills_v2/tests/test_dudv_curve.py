@@ -23,7 +23,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for DUDVCurveSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for DUDVCurveAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -50,10 +50,10 @@ pass  # TODO: restore
 #              46 STORE_NAME               9 (pytest)
 # 
 #   5          48 LOAD_CONST               1 (0)
-#              50 LOAD_CONST               3 (('DUDVCurveSkill',))
-#              52 IMPORT_NAME             10 (cloudpss_skills_v2.skills.dudv_curve)
-#              54 IMPORT_FROM             11 (DUDVCurveSkill)
-#              56 STORE_NAME              11 (DUDVCurveSkill)
+#              50 LOAD_CONST               3 (('DUDVCurveAnalysis',))
+#              52 IMPORT_NAME             10 (cloudpss_skills_v2.poweranalysis.dudv_curve)
+#              54 IMPORT_FROM             11 (DUDVCurveAnalysis)
+#              56 STORE_NAME              11 (DUDVCurveAnalysis)
 #              58 POP_TOP
 # 
 #   8          60 PUSH_NULL
@@ -100,7 +100,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_buses at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 9>:
 #   9           0 RESUME                   0
 # 
-#  10           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  10           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -177,7 +177,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 14>:
 #  14           0 RESUME                   0
 # 
-#  15           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  15           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -293,7 +293,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_dudv_points_shape at 0x3afa5260, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 22>:
 #  22           0 RESUME                   0
 # 
-#  23           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  23           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -475,7 +475,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_dudv_points_zero_at_steady at 0x3afa23c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 30>:
 #  30           0 RESUME                   0
 # 
-#  31           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  31           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -597,7 +597,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_dudv_points_none_margins at 0x3afa4860, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 40>:
 #  40           0 RESUME                   0
 # 
-#  41           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  41           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -698,7 +698,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_extract_dudv_from_result at 0x3af981b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 47>:
 #  47           0 RESUME                   0
 # 
-#  48           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  48           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -865,7 +865,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_stability_boundary at 0x3afa7720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 65>:
 #  65           0 RESUME                   0
 # 
-#  66           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  66           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1036,7 +1036,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_stability_boundary_none at 0x3af1bad0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 73>:
 #  73           0 RESUME                   0
 # 
-#  74           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  74           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1140,7 +1140,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3afa13e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_dudv_curve.py", line 82>:
 #  82           0 RESUME                   0
 # 
-#  83           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+#  83           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

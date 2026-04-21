@@ -38,7 +38,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for VSIWeakBusSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for VSIWeakBusAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -60,10 +60,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('VSIWeakBusSkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.vsi_weak_bus)
-#              46 IMPORT_FROM              9 (VSIWeakBusSkill)
-#              48 STORE_NAME               9 (VSIWeakBusSkill)
+#              42 LOAD_CONST               3 (('VSIWeakBusAnalysis',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.poweranalysis.vsi_weak_bus)
+#              46 IMPORT_FROM              9 (VSIWeakBusAnalysis)
+#              48 STORE_NAME               9 (VSIWeakBusAnalysis)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -134,7 +134,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3afa7230, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 8>:
 #   8           0 RESUME                   0
 # 
-#   9           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#   9           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -211,7 +211,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 13>:
 #  13           0 RESUME                   0
 # 
-#  14           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  14           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -315,7 +315,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_vsi_normal at 0x3af9a920, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 21>:
 #  21           0 RESUME                   0
 # 
-#  22           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  22           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -447,7 +447,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_vsi_zero_injection at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 27>:
 #  27           0 RESUME                   0
 # 
-#  28           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  28           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -525,7 +525,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_vsi_no_change at 0x3ae632d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 32>:
 #  32           0 RESUME                   0
 # 
-#  33           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  33           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -623,7 +623,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_matches_bus_identifier_exact at 0x3af9ce50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 39>:
 #  39           0 RESUME                   0
 # 
-#  40           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  40           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -729,7 +729,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_matches_bus_identifier_case_insensitive at 0x3afa4f50, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 43>:
 #  43           0 RESUME                   0
 # 
-#  44           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  44           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -835,7 +835,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_matches_bus_identifier_underscore at 0x3aee3ab0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 47>:
 #  47           0 RESUME                   0
 # 
-#  48           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  48           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -957,7 +957,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_weak_buses at 0x3afa6250, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 53>:
 #  53           0 RESUME                   0
 # 
-#  54           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  54           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1221,7 +1221,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_weak_buses_sorted at 0x3af39de0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 67>:
 #  67           0 RESUME                   0
 # 
-#  68           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  68           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1320,7 +1320,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_vsi_statistics at 0x3aeca6c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 75>:
 #  75           0 RESUME                   0
 # 
-#  76           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  76           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1600,7 +1600,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compute_vsi_statistics_empty at 0x3af909c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 84>:
 #  84           0 RESUME                   0
 # 
-#  85           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  85           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1736,7 +1736,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3af9ee00, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_vsi_weak_bus.py", line 92>:
 #  92           0 RESUME                   0
 # 
-#  93           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusSkill)
+#  93           2 LOAD_GLOBAL              1 (NULL + VSIWeakBusAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

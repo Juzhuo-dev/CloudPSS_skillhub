@@ -64,10 +64,10 @@ pass  # TODO: restore
 #              54 POP_TOP
 # 
 #   5          56 LOAD_CONST               1 (0)
-#              58 LOAD_CONST               4 (('ContingencyAnalysisSkill',))
-#              60 IMPORT_NAME             11 (cloudpss_skills_v2.skills.contingency_analysis)
-#              62 IMPORT_FROM             12 (ContingencyAnalysisSkill)
-#              64 STORE_NAME              12 (ContingencyAnalysisSkill)
+#              58 LOAD_CONST               4 (('ContingencyAnalysis',))
+#              60 IMPORT_NAME             11 (cloudpss_skills_v2.poweranalysis.contingency_analysis)
+#              62 IMPORT_FROM             12 (ContingencyAnalysis)
+#              64 STORE_NAME              12 (ContingencyAnalysis)
 #              66 POP_TOP
 # 
 #   8          68 PUSH_NULL
@@ -142,7 +142,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_valid_config at 0x3afa3560, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 9>:
 #   9           0 RESUME                   0
 # 
-#  10           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  10           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -303,7 +303,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_missing_model_rid at 0x3af94f70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 23>:
 #  23           0 RESUME                   0
 # 
-#  24           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  24           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -457,7 +457,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_invalid_level_format at 0x3af3fb70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 29>:
 #  29           0 RESUME                   0
 # 
-#  30           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  30           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -546,7 +546,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_voltage_limit_reversed at 0x3af981b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 38>:
 #  38           0 RESUME                   0
 # 
-#  39           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  39           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -723,7 +723,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_negative_thermal_limit at 0x3afad0d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 49>:
 #  49           0 RESUME                   0
 # 
-#  50           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  50           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -836,7 +836,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_n1_combinations at 0x3afa5a90, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 60>:
 #  60           0 RESUME                   0
 # 
-#  61           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  61           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1000,7 +1000,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_n2_combinations at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 66>:
 #  66           0 RESUME                   0
 # 
-#  67           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  67           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1190,7 +1190,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_max_combinations_limit at 0x3aef1020, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 72>:
 #  72           0 RESUME                   0
 # 
-#  73           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  73           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1323,7 +1323,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_empty_components at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 79>:
 #  79           0 RESUME                   0
 # 
-#  80           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  80           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1421,7 +1421,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_fail_status_severity_1 at 0x3af90d20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 86>:
 #  86           0 RESUME                   0
 # 
-#  87           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  87           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1506,7 +1506,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_pass_status_severity_0 at 0x3af0c6d0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 92>:
 #  92           0 RESUME                   0
 # 
-#  93           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  93           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1593,7 +1593,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_voltage_violation_severity at 0x3af8e200, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 98>:
 #  98           0 RESUME                   0
 # 
-#  99           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+#  99           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1753,7 +1753,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_weak_points at 0x3afa5260, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 107>:
 # 107           0 RESUME                   0
 # 
-# 108           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+# 108           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1991,7 +1991,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validation_failure_returns_failed at 0x3af9e7f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 121>:
 # 121           0 RESUME                   0
 # 
-# 122           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+# 122           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2163,7 +2163,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_with_components at 0x3af9d7e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 127>:
 # 127           0 RESUME                   0
 # 
-# 128           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+# 128           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2429,7 +2429,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_with_case_results at 0x3afa7720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_contingency_analysis.py", line 148>:
 # 148           0 RESUME                   0
 # 
-# 149           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysisSkill)
+# 149           2 LOAD_GLOBAL              1 (NULL + ContingencyAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

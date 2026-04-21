@@ -1,25 +1,25 @@
-"""Tests for cloudpss_skills_v2.skills.thevenin_equivalent."""
+"""Tests for cloudpss_skills_v2.poweranalysis.thevenin_equivalent."""
 import pytest
-from cloudpss_skills_v2.skills.thevenin_equivalent import TheveninEquivalentSkill
+from cloudpss_skills_v2.poweranalysis.thevenin_equivalent import TheveninEquivalentAnalysis
 
 
-class TestTheveninEquivalentSkill:
+class TestTheveninEquivalentAnalysis:
 
     def test_import(self):
         """Smoke test: module and class can be imported."""
-        assert TheveninEquivalentSkill is not None
+        assert TheveninEquivalentAnalysis is not None
 
     def test_instantiation(self):
         """Smoke test: class can be instantiated."""
         try:
-            instance = TheveninEquivalentSkill()
+            instance = TheveninEquivalentAnalysis()
         except TypeError:
             pytest.skip("Class requires constructor arguments")
 
     def test_has_name_attribute(self):
         """Smoke test: instance has expected attributes."""
         try:
-            instance = TheveninEquivalentSkill()
+            instance = TheveninEquivalentAnalysis()
             assert hasattr(instance, 'name') or hasattr(instance, 'run')
         except TypeError:
             pytest.skip("Class requires constructor arguments")

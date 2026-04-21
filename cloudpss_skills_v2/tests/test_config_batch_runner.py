@@ -1,25 +1,25 @@
-"""Tests for cloudpss_skills_v2.skills.config_batch_runner."""
+"""Tests for cloudpss_skills_v2.tools.config_batch_runner."""
 import pytest
-from cloudpss_skills_v2.skills.config_batch_runner import ConfigBatchRunnerSkill
+from cloudpss_skills_v2.tools.config_batch_runner import ConfigBatchRunnerTool
 
 
-class TestConfigBatchRunnerSkill:
+class TestConfigBatchRunnerTool:
 
     def test_import(self):
         """Smoke test: module and class can be imported."""
-        assert ConfigBatchRunnerSkill is not None
+        assert ConfigBatchRunnerTool is not None
 
     def test_instantiation(self):
         """Smoke test: class can be instantiated."""
         try:
-            instance = ConfigBatchRunnerSkill()
+            instance = ConfigBatchRunnerTool()
         except TypeError:
             pytest.skip("Class requires constructor arguments")
 
     def test_has_name_attribute(self):
         """Smoke test: instance has expected attributes."""
         try:
-            instance = ConfigBatchRunnerSkill()
+            instance = ConfigBatchRunnerTool()
             assert hasattr(instance, 'name') or hasattr(instance, 'run')
         except TypeError:
             pytest.skip("Class requires constructor arguments")

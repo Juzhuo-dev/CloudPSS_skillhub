@@ -1,4 +1,4 @@
-"""Tests for v2 skills: ShortCircuitSkill, ContingencyAnalysisSkill, LossAnalysisSkill, VoltageStabilitySkill."""
+"""Tests for v2 skills: ShortCircuitAnalysis, ContingencyAnalysis, LossAnalysis, VoltageStabilityAnalysis."""
 
 import json
 import pytest
@@ -8,15 +8,15 @@ import tempfile
 import os
 
 from cloudpss_skills_v2.core.skill_result import SkillResult, SkillStatus
-from cloudpss_skills_v2.skills.short_circuit import ShortCircuitSkill
-from cloudpss_skills_v2.skills.contingency_analysis import ContingencyAnalysisSkill
-from cloudpss_skills_v2.skills.loss_analysis import (
-    LossAnalysisSkill,
+from cloudpss_skills_v2.poweranalysis.short_circuit import ShortCircuitAnalysis
+from cloudpss_skills_v2.poweranalysis.contingency_analysis import ContingencyAnalysis
+from cloudpss_skills_v2.poweranalysis.loss_analysis import (
+    LossAnalysis,
     BranchLoss,
     TransformerLoss,
     _as_float as loss_as_float,
 )
-from cloudpss_skills_v2.skills.voltage_stability import VoltageStabilitySkill
+from cloudpss_skills_v2.poweranalysis.voltage_stability import VoltageStabilityAnalysis
 
 
 def _make_mock_api(sim_data=None):
@@ -39,21 +39,21 @@ def _make_mock_api(sim_data=None):
     return mock_api, mock_result
 
 
-class TestShortCircuitSkill:
+class TestShortCircuitAnalysis:
     def test_name_and_description(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         assert skill.name == "short_circuit"
         assert "短路" in skill.description
 
     def test_default_config(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         config = skill.get_default_config()
         assert config["skill"] == "short_circuit"
         assert "fault" in config
         assert config["fault"]["type"] == "three_phase"
 
     def test_config_schema(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         schema = skill.config_schema
         assert schema["required"] == ["skill", "model", "fault"]
         assert "fault" in schema["properties"]
@@ -61,7 +61,7 @@ class TestShortCircuitSkill:
         assert "calculation" in schema["properties"]
 
     def test_validate_missing_rid(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         valid, errors = skill.validate(
             {"fault": {"location": "Bus7"}, "auth": {"token": "t"}}
         )
@@ -69,7 +69,7 @@ class TestShortCircuitSkill:
         assert any("model.rid" in e for e in errors)
 
     def test_validate_missing_fault_location(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         valid, errors = skill.validate(
             {"model": {"rid": "test"}, "auth": {"token": "t"}}
         )
@@ -77,7 +77,7 @@ class TestShortCircuitSkill:
         assert any("fault.location" in e for e in errors)
 
     def test_validate_valid_config(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         valid, errors = skill.validate(
             {
                 "model": {"rid": "test"},
@@ -89,13 +89,13 @@ class TestShortCircuitSkill:
         assert errors == []
 
     def test_run_validation_failure(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED
         assert "model.rid" in result.error
 
     def test_run_success_with_adapter_data(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         mock_api, mock_result = _make_mock_api(
             {
                 "fault_currents": [
@@ -109,7 +109,7 @@ class TestShortCircuitSkill:
         )
 
         with patch(
-            "cloudpss_skills_v2.skills.short_circuit.APIFactory"
+            "cloudpss_skills_v2.poweranalysis.short_circuit.APIFactory"
         ) as mock_factory:
             mock_factory.create_short_circuit_api.return_value = mock_api
             result = skill.run(
@@ -126,7 +126,7 @@ class TestShortCircuitSkill:
         assert "short_circuit_mva" in result.data
 
     def test_calculate_short_circuit_capacity(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         analysis = {
             "I_A": {"steady_current": 10.0},
             "I_B": {"steady_current": 5.0},
@@ -136,7 +136,7 @@ class TestShortCircuitSkill:
         assert scc["I_A"]["short_circuit_mva"] > 0
 
     def test_build_analysis_from_adapter_data(self):
-        skill = ShortCircuitSkill()
+        skill = ShortCircuitAnalysis()
         data = {
             "fault_currents": [
                 {"channel": "ch1", "current_ka": 20.0},
@@ -152,45 +152,45 @@ class TestShortCircuitSkill:
         assert "min_voltage" in analysis["ch2"]
 
 
-class TestContingencyAnalysisSkill:
+class TestContingencyAnalysis:
     def test_name_and_description(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         assert skill.name == "contingency_analysis"
         assert "预想事故" in skill.description
 
     def test_default_config(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         config = skill.get_default_config()
         assert config["skill"] == "contingency_analysis"
         assert config["contingency"]["level"] == "N-1"
 
     def test_config_schema(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         schema = skill.config_schema
         assert schema["required"] == ["skill", "model"]
         assert "contingency" in schema["properties"]
         assert "ranking" in schema["properties"]
 
     def test_validate_missing_rid(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         valid, errors = skill.validate({"auth": {"token": "t"}})
         assert not valid
 
     def test_validate_valid_config(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         valid, errors = skill.validate(
             {"model": {"rid": "test"}, "auth": {"token": "t"}}
         )
         assert valid
 
     def test_calculate_severity_fail(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         result = {"status": "FAIL"}
         severity = skill._calculate_severity(result, {"min": 0.95, "max": 1.05}, 1.0)
         assert severity == 1.0
 
     def test_calculate_severity_violation(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         result = {
             "status": "VIOLATION",
             "min_voltage": 0.85,
@@ -201,7 +201,7 @@ class TestContingencyAnalysisSkill:
         assert severity <= 1.0
 
     def test_calculate_severity_pass(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         result = {
             "status": "PASS",
             "min_voltage": 0.98,
@@ -211,7 +211,7 @@ class TestContingencyAnalysisSkill:
         assert severity == 0.0
 
     def test_identify_weak_points(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         results = [
             {"name": "Case1", "components": ["Line1", "Line2"], "severity": 0.9},
             {"name": "Case2", "components": ["Line1", "Line3"], "severity": 0.7},
@@ -228,7 +228,7 @@ class TestContingencyAnalysisSkill:
         """Verify _discover_components maps type strings to ComponentType correctly."""
         from cloudpss_skills_v2.powerskill import ComponentInfo, ComponentType
 
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         mock_handle = MagicMock()
         branch_comp = ComponentInfo(
             key="line_1",
@@ -253,43 +253,43 @@ class TestContingencyAnalysisSkill:
         assert available_empty == []
 
     def test_run_validation_failure(self):
-        skill = ContingencyAnalysisSkill()
+        skill = ContingencyAnalysis()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED
 
 
-class TestLossAnalysisSkill:
+class TestLossAnalysis:
     def test_name_and_description(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         assert skill.name == "loss_analysis"
         assert "网损" in skill.description
 
     def test_default_config(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         config = skill.get_default_config()
         assert config["skill"] == "loss_analysis"
         assert "analysis" in config
 
     def test_config_schema(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         schema = skill.config_schema
         assert schema["required"] == ["skill", "model"]
         assert "analysis" in schema["properties"]
 
     def test_validate_missing_rid(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         valid, errors = skill.validate({"auth": {"token": "t"}})
         assert not valid
 
     def test_validate_valid_config(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         valid, errors = skill.validate(
             {"model": {"rid": "test"}, "auth": {"token": "t"}}
         )
         assert valid
 
     def test_calculate_line_losses(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         branches = [
             {
                 "name": "Line1",
@@ -313,7 +313,7 @@ class TestLossAnalysisSkill:
         assert skill.branch_losses[0].p_loss_mw == 2.5
 
     def test_generate_summary(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         skill.branch_losses = [
             BranchLoss("L1", "B1", "B2", 3.0, 1.5, 0.5, 60),
             BranchLoss("L2", "B3", "B4", 1.0, 0.5, 0.3, 40),
@@ -329,7 +329,7 @@ class TestLossAnalysisSkill:
         assert summary["transformer_count"] == 1
 
     def test_generate_optimization_suggestions(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         skill.branch_losses = [
             BranchLoss("L1", "B1", "B2", 20.0, 5.0, 1.0, 80),
         ]
@@ -347,14 +347,14 @@ class TestLossAnalysisSkill:
         assert loss_as_float("abc", 99) == 99
 
     def test_branch_to_dict(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         bl = BranchLoss("L1", "B1", "B2", 3.0, 1.5, 0.5, 60)
         d = skill._branch_to_dict(bl)
         assert d["branch_id"] == "L1"
         assert d["p_loss_mw"] == 3.0
 
     def test_transformer_to_dict(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         tl = TransformerLoss("T1", "B1", "B2", None, None, 0.8, 0.3)
         d = skill._transformer_to_dict(tl)
         assert d["transformer_id"] == "T1"
@@ -362,51 +362,51 @@ class TestLossAnalysisSkill:
         assert d["total_loss_mw"] == 0.8
 
     def test_run_validation_failure(self):
-        skill = LossAnalysisSkill()
+        skill = LossAnalysis()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED
 
 
-class TestVoltageStabilitySkill:
+class TestVoltageStabilityAnalysis:
     def test_name_and_description(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         assert skill.name == "voltage_stability"
         assert "电压" in skill.description
 
     def test_default_config(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         config = skill.get_default_config()
         assert config["skill"] == "voltage_stability"
         assert "scan" in config
         assert len(config["scan"]["load_scaling"]) > 0
 
     def test_config_schema(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         schema = skill.config_schema
         assert schema["required"] == ["skill", "model"]
         assert "scan" in schema["properties"]
         assert "monitoring" in schema["properties"]
 
     def test_validate_missing_rid(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         valid, errors = skill.validate({"auth": {"token": "t"}})
         assert not valid
 
     def test_validate_valid_config(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         valid, errors = skill.validate(
             {"model": {"rid": "test"}, "auth": {"token": "t"}}
         )
         assert valid
 
     def test_matches_bus_identifier(self):
-        assert VoltageStabilitySkill._matches_bus_identifier("Bus7", "Bus7")
-        assert VoltageStabilitySkill._matches_bus_identifier("bus7", "Bus7")
-        assert not VoltageStabilitySkill._matches_bus_identifier("Bus7", "Bus8")
-        assert VoltageStabilitySkill._matches_bus_identifier("Bus", "Bus_7")
+        assert VoltageStabilityAnalysis._matches_bus_identifier("Bus7", "Bus7")
+        assert VoltageStabilityAnalysis._matches_bus_identifier("bus7", "Bus7")
+        assert not VoltageStabilityAnalysis._matches_bus_identifier("Bus7", "Bus8")
+        assert VoltageStabilityAnalysis._matches_bus_identifier("Bus", "Bus_7")
 
     def test_generate_pv_curve(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         converged = [
             {"scale": 1.0, "voltages": {"Bus30": 1.02, "Bus38": 0.98}},
             {"scale": 1.5, "voltages": {"Bus30": 0.95, "Bus38": 0.88}},
@@ -418,12 +418,12 @@ class TestVoltageStabilitySkill:
         assert pv[0]["voltage"] == 1.02
 
     def test_run_validation_failure(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         result = skill.run({})
         assert result.status == SkillStatus.FAILED
 
     def test_run_with_pf_failure(self):
-        skill = VoltageStabilitySkill()
+        skill = VoltageStabilityAnalysis()
         mock_api, mock_result = _make_mock_api()
         mock_result.is_success = False
         mock_result.errors = ["PF failed"]
@@ -434,7 +434,7 @@ class TestVoltageStabilitySkill:
         mock_api.get_model_handle.return_value = mock_handle
 
         with patch(
-            "cloudpss_skills_v2.skills.voltage_stability.APIFactory"
+            "cloudpss_skills_v2.poweranalysis.voltage_stability.APIFactory"
         ) as mock_factory:
             mock_factory.create_powerflow_api.return_value = mock_api
             result = skill.run(

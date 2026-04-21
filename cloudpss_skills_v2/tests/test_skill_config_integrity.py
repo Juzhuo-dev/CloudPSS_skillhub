@@ -58,181 +58,181 @@ pass  # TODO: restore
 #              62 POP_TOP
 # 
 #  11          64 LOAD_CONST               1 (0)
-#              66 LOAD_CONST               4 (('AutoChannelSetupSkill', 'AutoLoopBreakerSkill', 'BatchPowerFlowSkill', 'BatchTaskManagerSkill', 'CompareVisualizationSkill', 'ComponentCatalogSkill', 'ComtradeExportSkill', 'ConfigBatchRunnerSkill', 'ConfigRunResult', 'ContingencyAnalysisSkill', 'DUDVCurveSkill', 'DisturbanceSeveritySkill', 'EmtFaultStudySkill', 'EmtN1ScreeningSkill', 'EMTSimulationSkill', 'FaultClearingScanSkill', 'FaultSeverityScanSkill', 'FrequencyResponseSkill', 'HDF5ExportSkill', 'HarmonicAnalysisSkill', 'LossAnalysis', 'MaintenanceSecuritySkill', 'ModelBuilderSkill', 'ModelHubSkill', 'ModelParameterExtractorSkill', 'N1SecuritySkill', 'N2SecuritySkill', 'OrthogonalSensitivitySkill', 'ParamScanSkill', 'ParameterSensitivitySkill', 'PowerFlowSkill', 'PowerQualityAnalysisSkill', 'ProtectionCoordinationSkill', 'ReactiveCompensationDesignSkill', 'ReportGeneratorSkill', 'RenewableIntegrationSkill', 'ResultCompareSkill', 'ShortCircuitSkill', 'SmallSignalStabilitySkill', 'StudyPipelineSkill', 'TheveninEquivalentSkill', 'TopologyCheckSkill', 'TransientStabilityMarginSkill', 'TransientStabilitySkill', 'VisualizeSkill', 'VoltageStabilitySkill', 'VSIWeakBusSkill', 'WaveformExportSkill'))
+#              66 LOAD_CONST               4 (('AutoChannelSetupTool', 'AutoLoopBreakerTool', 'BatchPowerFlowAnalysis', 'BatchTaskManagerTool', 'CompareVisualizationTool', 'ComponentCatalogTool', 'ComtradeExportTool', 'ConfigBatchRunnerTool', 'ConfigRunResult', 'ContingencyAnalysis', 'DUDVCurveAnalysis', 'DisturbanceSeverityAnalysis', 'EmtFaultStudyAnalysis', 'EmtN1ScreeningAnalysis', 'EMTPreset', 'FaultClearingScanAnalysis', 'FaultSeverityScanAnalysis', 'FrequencyResponseAnalysis', 'HDF5ExportTool', 'HarmonicAnalysisAnalysis', 'LossAnalysis', 'MaintenanceSecurityAnalysis', 'ModelBuilderTool', 'ModelHubTool', 'ModelParameterExtractorTool', 'N1SecurityAnalysis', 'N2SecurityAnalysis', 'OrthogonalSensitivityAnalysis', 'ParamScanAnalysis', 'ParameterSensitivityAnalysis', 'PowerFlowPreset', 'PowerQualityAnalysisAnalysis', 'ProtectionCoordinationAnalysis', 'ReactiveCompensationDesignAnalysis', 'ReportGeneratorTool', 'RenewableIntegrationAnalysis', 'ResultCompareTool', 'ShortCircuitAnalysis', 'SmallSignalStabilityAnalysis', 'StudyPipelineTool', 'TheveninEquivalentAnalysis', 'TopologyCheckTool', 'TransientStabilityMarginAnalysis', 'TransientStabilityAnalysis', 'VisualizeTool', 'VoltageStabilityAnalysis', 'VSIWeakBusAnalysis', 'WaveformExportTool'))
 #              68 IMPORT_NAME             13 (cloudpss_skills_v2.skills)
-#              70 IMPORT_FROM             14 (AutoChannelSetupSkill)
-#              72 STORE_NAME              14 (AutoChannelSetupSkill)
-#              74 IMPORT_FROM             15 (AutoLoopBreakerSkill)
-#              76 STORE_NAME              15 (AutoLoopBreakerSkill)
-#              78 IMPORT_FROM             16 (BatchPowerFlowSkill)
-#              80 STORE_NAME              16 (BatchPowerFlowSkill)
-#              82 IMPORT_FROM             17 (BatchTaskManagerSkill)
-#              84 STORE_NAME              17 (BatchTaskManagerSkill)
-#              86 IMPORT_FROM             18 (CompareVisualizationSkill)
-#              88 STORE_NAME              18 (CompareVisualizationSkill)
-#              90 IMPORT_FROM             19 (ComponentCatalogSkill)
-#              92 STORE_NAME              19 (ComponentCatalogSkill)
-#              94 IMPORT_FROM             20 (ComtradeExportSkill)
-#              96 STORE_NAME              20 (ComtradeExportSkill)
-#              98 IMPORT_FROM             21 (ConfigBatchRunnerSkill)
-#             100 STORE_NAME              21 (ConfigBatchRunnerSkill)
+#              70 IMPORT_FROM             14 (AutoChannelSetupTool)
+#              72 STORE_NAME              14 (AutoChannelSetupTool)
+#              74 IMPORT_FROM             15 (AutoLoopBreakerTool)
+#              76 STORE_NAME              15 (AutoLoopBreakerTool)
+#              78 IMPORT_FROM             16 (BatchPowerFlowAnalysis)
+#              80 STORE_NAME              16 (BatchPowerFlowAnalysis)
+#              82 IMPORT_FROM             17 (BatchTaskManagerTool)
+#              84 STORE_NAME              17 (BatchTaskManagerTool)
+#              86 IMPORT_FROM             18 (CompareVisualizationTool)
+#              88 STORE_NAME              18 (CompareVisualizationTool)
+#              90 IMPORT_FROM             19 (ComponentCatalogTool)
+#              92 STORE_NAME              19 (ComponentCatalogTool)
+#              94 IMPORT_FROM             20 (ComtradeExportTool)
+#              96 STORE_NAME              20 (ComtradeExportTool)
+#              98 IMPORT_FROM             21 (ConfigBatchRunnerTool)
+#             100 STORE_NAME              21 (ConfigBatchRunnerTool)
 #             102 IMPORT_FROM             22 (ConfigRunResult)
 #             104 STORE_NAME              22 (ConfigRunResult)
-#             106 IMPORT_FROM             23 (ContingencyAnalysisSkill)
-#             108 STORE_NAME              23 (ContingencyAnalysisSkill)
-#             110 IMPORT_FROM             24 (DUDVCurveSkill)
-#             112 STORE_NAME              24 (DUDVCurveSkill)
-#             114 IMPORT_FROM             25 (DisturbanceSeveritySkill)
-#             116 STORE_NAME              25 (DisturbanceSeveritySkill)
-#             118 IMPORT_FROM             26 (EmtFaultStudySkill)
-#             120 STORE_NAME              26 (EmtFaultStudySkill)
-#             122 IMPORT_FROM             27 (EmtN1ScreeningSkill)
-#             124 STORE_NAME              27 (EmtN1ScreeningSkill)
-#             126 IMPORT_FROM             28 (EMTSimulationSkill)
-#             128 STORE_NAME              28 (EMTSimulationSkill)
-#             130 IMPORT_FROM             29 (FaultClearingScanSkill)
-#             132 STORE_NAME              29 (FaultClearingScanSkill)
-#             134 IMPORT_FROM             30 (FaultSeverityScanSkill)
-#             136 STORE_NAME              30 (FaultSeverityScanSkill)
-#             138 IMPORT_FROM             31 (FrequencyResponseSkill)
-#             140 STORE_NAME              31 (FrequencyResponseSkill)
-#             142 IMPORT_FROM             32 (HDF5ExportSkill)
-#             144 STORE_NAME              32 (HDF5ExportSkill)
-#             146 IMPORT_FROM             33 (HarmonicAnalysisSkill)
-#             148 STORE_NAME              33 (HarmonicAnalysisSkill)
+#             106 IMPORT_FROM             23 (ContingencyAnalysis)
+#             108 STORE_NAME              23 (ContingencyAnalysis)
+#             110 IMPORT_FROM             24 (DUDVCurveAnalysis)
+#             112 STORE_NAME              24 (DUDVCurveAnalysis)
+#             114 IMPORT_FROM             25 (DisturbanceSeverityAnalysis)
+#             116 STORE_NAME              25 (DisturbanceSeverityAnalysis)
+#             118 IMPORT_FROM             26 (EmtFaultStudyAnalysis)
+#             120 STORE_NAME              26 (EmtFaultStudyAnalysis)
+#             122 IMPORT_FROM             27 (EmtN1ScreeningAnalysis)
+#             124 STORE_NAME              27 (EmtN1ScreeningAnalysis)
+#             126 IMPORT_FROM             28 (EMTPreset)
+#             128 STORE_NAME              28 (EMTPreset)
+#             130 IMPORT_FROM             29 (FaultClearingScanAnalysis)
+#             132 STORE_NAME              29 (FaultClearingScanAnalysis)
+#             134 IMPORT_FROM             30 (FaultSeverityScanAnalysis)
+#             136 STORE_NAME              30 (FaultSeverityScanAnalysis)
+#             138 IMPORT_FROM             31 (FrequencyResponseAnalysis)
+#             140 STORE_NAME              31 (FrequencyResponseAnalysis)
+#             142 IMPORT_FROM             32 (HDF5ExportTool)
+#             144 STORE_NAME              32 (HDF5ExportTool)
+#             146 IMPORT_FROM             33 (HarmonicAnalysisAnalysis)
+#             148 STORE_NAME              33 (HarmonicAnalysisAnalysis)
 #             150 IMPORT_FROM             34 (LossAnalysis)
 #             152 STORE_NAME              34 (LossAnalysis)
-#             154 IMPORT_FROM             35 (MaintenanceSecuritySkill)
-#             156 STORE_NAME              35 (MaintenanceSecuritySkill)
-#             158 IMPORT_FROM             36 (ModelBuilderSkill)
-#             160 STORE_NAME              36 (ModelBuilderSkill)
-#             162 IMPORT_FROM             37 (ModelHubSkill)
-#             164 STORE_NAME              37 (ModelHubSkill)
-#             166 IMPORT_FROM             38 (ModelParameterExtractorSkill)
-#             168 STORE_NAME              38 (ModelParameterExtractorSkill)
-#             170 IMPORT_FROM             39 (N1SecuritySkill)
-#             172 STORE_NAME              39 (N1SecuritySkill)
-#             174 IMPORT_FROM             40 (N2SecuritySkill)
-#             176 STORE_NAME              40 (N2SecuritySkill)
-#             178 IMPORT_FROM             41 (OrthogonalSensitivitySkill)
-#             180 STORE_NAME              41 (OrthogonalSensitivitySkill)
-#             182 IMPORT_FROM             42 (ParamScanSkill)
-#             184 STORE_NAME              42 (ParamScanSkill)
-#             186 IMPORT_FROM             43 (ParameterSensitivitySkill)
-#             188 STORE_NAME              43 (ParameterSensitivitySkill)
-#             190 IMPORT_FROM             44 (PowerFlowSkill)
-#             192 STORE_NAME              44 (PowerFlowSkill)
-#             194 IMPORT_FROM             45 (PowerQualityAnalysisSkill)
-#             196 STORE_NAME              45 (PowerQualityAnalysisSkill)
-#             198 IMPORT_FROM             46 (ProtectionCoordinationSkill)
-#             200 STORE_NAME              46 (ProtectionCoordinationSkill)
-#             202 IMPORT_FROM             47 (ReactiveCompensationDesignSkill)
-#             204 STORE_NAME              47 (ReactiveCompensationDesignSkill)
-#             206 IMPORT_FROM             48 (ReportGeneratorSkill)
-#             208 STORE_NAME              48 (ReportGeneratorSkill)
-#             210 IMPORT_FROM             49 (RenewableIntegrationSkill)
-#             212 STORE_NAME              49 (RenewableIntegrationSkill)
-#             214 IMPORT_FROM             50 (ResultCompareSkill)
-#             216 STORE_NAME              50 (ResultCompareSkill)
-#             218 IMPORT_FROM             51 (ShortCircuitSkill)
-#             220 STORE_NAME              51 (ShortCircuitSkill)
-#             222 IMPORT_FROM             52 (SmallSignalStabilitySkill)
-#             224 STORE_NAME              52 (SmallSignalStabilitySkill)
-#             226 IMPORT_FROM             53 (StudyPipelineSkill)
-#             228 STORE_NAME              53 (StudyPipelineSkill)
-#             230 IMPORT_FROM             54 (TheveninEquivalentSkill)
-#             232 STORE_NAME              54 (TheveninEquivalentSkill)
-#             234 IMPORT_FROM             55 (TopologyCheckSkill)
-#             236 STORE_NAME              55 (TopologyCheckSkill)
-#             238 IMPORT_FROM             56 (TransientStabilityMarginSkill)
-#             240 STORE_NAME              56 (TransientStabilityMarginSkill)
-#             242 IMPORT_FROM             57 (TransientStabilitySkill)
-#             244 STORE_NAME              57 (TransientStabilitySkill)
-#             246 IMPORT_FROM             58 (VisualizeSkill)
-#             248 STORE_NAME              58 (VisualizeSkill)
-#             250 IMPORT_FROM             59 (VoltageStabilitySkill)
-#             252 STORE_NAME              59 (VoltageStabilitySkill)
-#             254 IMPORT_FROM             60 (VSIWeakBusSkill)
-#             256 STORE_NAME              60 (VSIWeakBusSkill)
-#             258 IMPORT_FROM             61 (WaveformExportSkill)
-#             260 STORE_NAME              61 (WaveformExportSkill)
+#             154 IMPORT_FROM             35 (MaintenanceSecurityAnalysis)
+#             156 STORE_NAME              35 (MaintenanceSecurityAnalysis)
+#             158 IMPORT_FROM             36 (ModelBuilderTool)
+#             160 STORE_NAME              36 (ModelBuilderTool)
+#             162 IMPORT_FROM             37 (ModelHubTool)
+#             164 STORE_NAME              37 (ModelHubTool)
+#             166 IMPORT_FROM             38 (ModelParameterExtractorTool)
+#             168 STORE_NAME              38 (ModelParameterExtractorTool)
+#             170 IMPORT_FROM             39 (N1SecurityAnalysis)
+#             172 STORE_NAME              39 (N1SecurityAnalysis)
+#             174 IMPORT_FROM             40 (N2SecurityAnalysis)
+#             176 STORE_NAME              40 (N2SecurityAnalysis)
+#             178 IMPORT_FROM             41 (OrthogonalSensitivityAnalysis)
+#             180 STORE_NAME              41 (OrthogonalSensitivityAnalysis)
+#             182 IMPORT_FROM             42 (ParamScanAnalysis)
+#             184 STORE_NAME              42 (ParamScanAnalysis)
+#             186 IMPORT_FROM             43 (ParameterSensitivityAnalysis)
+#             188 STORE_NAME              43 (ParameterSensitivityAnalysis)
+#             190 IMPORT_FROM             44 (PowerFlowPreset)
+#             192 STORE_NAME              44 (PowerFlowPreset)
+#             194 IMPORT_FROM             45 (PowerQualityAnalysisAnalysis)
+#             196 STORE_NAME              45 (PowerQualityAnalysisAnalysis)
+#             198 IMPORT_FROM             46 (ProtectionCoordinationAnalysis)
+#             200 STORE_NAME              46 (ProtectionCoordinationAnalysis)
+#             202 IMPORT_FROM             47 (ReactiveCompensationDesignAnalysis)
+#             204 STORE_NAME              47 (ReactiveCompensationDesignAnalysis)
+#             206 IMPORT_FROM             48 (ReportGeneratorTool)
+#             208 STORE_NAME              48 (ReportGeneratorTool)
+#             210 IMPORT_FROM             49 (RenewableIntegrationAnalysis)
+#             212 STORE_NAME              49 (RenewableIntegrationAnalysis)
+#             214 IMPORT_FROM             50 (ResultCompareTool)
+#             216 STORE_NAME              50 (ResultCompareTool)
+#             218 IMPORT_FROM             51 (ShortCircuitAnalysis)
+#             220 STORE_NAME              51 (ShortCircuitAnalysis)
+#             222 IMPORT_FROM             52 (SmallSignalStabilityAnalysis)
+#             224 STORE_NAME              52 (SmallSignalStabilityAnalysis)
+#             226 IMPORT_FROM             53 (StudyPipelineTool)
+#             228 STORE_NAME              53 (StudyPipelineTool)
+#             230 IMPORT_FROM             54 (TheveninEquivalentAnalysis)
+#             232 STORE_NAME              54 (TheveninEquivalentAnalysis)
+#             234 IMPORT_FROM             55 (TopologyCheckTool)
+#             236 STORE_NAME              55 (TopologyCheckTool)
+#             238 IMPORT_FROM             56 (TransientStabilityMarginAnalysis)
+#             240 STORE_NAME              56 (TransientStabilityMarginAnalysis)
+#             242 IMPORT_FROM             57 (TransientStabilityAnalysis)
+#             244 STORE_NAME              57 (TransientStabilityAnalysis)
+#             246 IMPORT_FROM             58 (VisualizeTool)
+#             248 STORE_NAME              58 (VisualizeTool)
+#             250 IMPORT_FROM             59 (VoltageStabilityAnalysis)
+#             252 STORE_NAME              59 (VoltageStabilityAnalysis)
+#             254 IMPORT_FROM             60 (VSIWeakBusAnalysis)
+#             256 STORE_NAME              60 (VSIWeakBusAnalysis)
+#             258 IMPORT_FROM             61 (WaveformExportTool)
+#             260 STORE_NAME              61 (WaveformExportTool)
 #             262 POP_TOP
 # 
 #  64         264 BUILD_LIST               0
 # 
-#  65         266 LOAD_NAME               14 (AutoChannelSetupSkill)
+#  65         266 LOAD_NAME               14 (AutoChannelSetupTool)
 # 
 #  64         268 LIST_APPEND              1
 # 
-#  66         270 LOAD_NAME               15 (AutoLoopBreakerSkill)
+#  66         270 LOAD_NAME               15 (AutoLoopBreakerTool)
 # 
 #  64         272 LIST_APPEND              1
 # 
-#  67         274 LOAD_NAME               16 (BatchPowerFlowSkill)
+#  67         274 LOAD_NAME               16 (BatchPowerFlowAnalysis)
 # 
 #  64         276 LIST_APPEND              1
 # 
-#  68         278 LOAD_NAME               17 (BatchTaskManagerSkill)
+#  68         278 LOAD_NAME               17 (BatchTaskManagerTool)
 # 
 #  64         280 LIST_APPEND              1
 # 
-#  69         282 LOAD_NAME               18 (CompareVisualizationSkill)
+#  69         282 LOAD_NAME               18 (CompareVisualizationTool)
 # 
 #  64         284 LIST_APPEND              1
 # 
-#  70         286 LOAD_NAME               19 (ComponentCatalogSkill)
+#  70         286 LOAD_NAME               19 (ComponentCatalogTool)
 # 
 #  64         288 LIST_APPEND              1
 # 
-#  71         290 LOAD_NAME               20 (ComtradeExportSkill)
+#  71         290 LOAD_NAME               20 (ComtradeExportTool)
 # 
 #  64         292 LIST_APPEND              1
 # 
-#  72         294 LOAD_NAME               21 (ConfigBatchRunnerSkill)
+#  72         294 LOAD_NAME               21 (ConfigBatchRunnerTool)
 # 
 #  64         296 LIST_APPEND              1
 # 
-#  73         298 LOAD_NAME               23 (ContingencyAnalysisSkill)
+#  73         298 LOAD_NAME               23 (ContingencyAnalysis)
 # 
 #  64         300 LIST_APPEND              1
 # 
-#  74         302 LOAD_NAME               24 (DUDVCurveSkill)
+#  74         302 LOAD_NAME               24 (DUDVCurveAnalysis)
 # 
 #  64         304 LIST_APPEND              1
 # 
-#  75         306 LOAD_NAME               25 (DisturbanceSeveritySkill)
+#  75         306 LOAD_NAME               25 (DisturbanceSeverityAnalysis)
 # 
 #  64         308 LIST_APPEND              1
 # 
-#  76         310 LOAD_NAME               26 (EmtFaultStudySkill)
+#  76         310 LOAD_NAME               26 (EmtFaultStudyAnalysis)
 # 
 #  64         312 LIST_APPEND              1
 # 
-#  77         314 LOAD_NAME               27 (EmtN1ScreeningSkill)
+#  77         314 LOAD_NAME               27 (EmtN1ScreeningAnalysis)
 # 
 #  64         316 LIST_APPEND              1
 # 
-#  78         318 LOAD_NAME               28 (EMTSimulationSkill)
+#  78         318 LOAD_NAME               28 (EMTPreset)
 # 
 #  64         320 LIST_APPEND              1
 # 
-#  79         322 LOAD_NAME               29 (FaultClearingScanSkill)
+#  79         322 LOAD_NAME               29 (FaultClearingScanAnalysis)
 # 
 #  64         324 LIST_APPEND              1
 # 
-#  80         326 LOAD_NAME               30 (FaultSeverityScanSkill)
+#  80         326 LOAD_NAME               30 (FaultSeverityScanAnalysis)
 # 
 #  64         328 LIST_APPEND              1
 # 
-#  81         330 LOAD_NAME               31 (FrequencyResponseSkill)
+#  81         330 LOAD_NAME               31 (FrequencyResponseAnalysis)
 # 
 #  64         332 LIST_APPEND              1
 # 
-#  82         334 LOAD_NAME               32 (HDF5ExportSkill)
+#  82         334 LOAD_NAME               32 (HDF5ExportTool)
 # 
 #  64         336 LIST_APPEND              1
 # 
-#  83         338 LOAD_NAME               33 (HarmonicAnalysisSkill)
+#  83         338 LOAD_NAME               33 (HarmonicAnalysisAnalysis)
 # 
 #  64         340 LIST_APPEND              1
 # 
@@ -240,111 +240,111 @@ pass  # TODO: restore
 # 
 #  64         344 LIST_APPEND              1
 # 
-#  85         346 LOAD_NAME               35 (MaintenanceSecuritySkill)
+#  85         346 LOAD_NAME               35 (MaintenanceSecurityAnalysis)
 # 
 #  64         348 LIST_APPEND              1
 # 
-#  86         350 LOAD_NAME               36 (ModelBuilderSkill)
+#  86         350 LOAD_NAME               36 (ModelBuilderTool)
 # 
 #  64         352 LIST_APPEND              1
 # 
-#  87         354 LOAD_NAME               37 (ModelHubSkill)
+#  87         354 LOAD_NAME               37 (ModelHubTool)
 # 
 #  64         356 LIST_APPEND              1
 # 
-#  88         358 LOAD_NAME               38 (ModelParameterExtractorSkill)
+#  88         358 LOAD_NAME               38 (ModelParameterExtractorTool)
 # 
 #  64         360 LIST_APPEND              1
 # 
-#  89         362 LOAD_NAME               39 (N1SecuritySkill)
+#  89         362 LOAD_NAME               39 (N1SecurityAnalysis)
 # 
 #  64         364 LIST_APPEND              1
 # 
-#  90         366 LOAD_NAME               40 (N2SecuritySkill)
+#  90         366 LOAD_NAME               40 (N2SecurityAnalysis)
 # 
 #  64         368 LIST_APPEND              1
 # 
-#  91         370 LOAD_NAME               41 (OrthogonalSensitivitySkill)
+#  91         370 LOAD_NAME               41 (OrthogonalSensitivityAnalysis)
 # 
 #  64         372 LIST_APPEND              1
 # 
-#  92         374 LOAD_NAME               42 (ParamScanSkill)
+#  92         374 LOAD_NAME               42 (ParamScanAnalysis)
 # 
 #  64         376 LIST_APPEND              1
 # 
-#  93         378 LOAD_NAME               43 (ParameterSensitivitySkill)
+#  93         378 LOAD_NAME               43 (ParameterSensitivityAnalysis)
 # 
 #  64         380 LIST_APPEND              1
 # 
-#  94         382 LOAD_NAME               44 (PowerFlowSkill)
+#  94         382 LOAD_NAME               44 (PowerFlowPreset)
 # 
 #  64         384 LIST_APPEND              1
 # 
-#  95         386 LOAD_NAME               45 (PowerQualityAnalysisSkill)
+#  95         386 LOAD_NAME               45 (PowerQualityAnalysisAnalysis)
 # 
 #  64         388 LIST_APPEND              1
 # 
-#  96         390 LOAD_NAME               46 (ProtectionCoordinationSkill)
+#  96         390 LOAD_NAME               46 (ProtectionCoordinationAnalysis)
 # 
 #  64         392 LIST_APPEND              1
 # 
-#  97         394 LOAD_NAME               47 (ReactiveCompensationDesignSkill)
+#  97         394 LOAD_NAME               47 (ReactiveCompensationDesignAnalysis)
 # 
 #  64         396 LIST_APPEND              1
 # 
-#  98         398 LOAD_NAME               48 (ReportGeneratorSkill)
+#  98         398 LOAD_NAME               48 (ReportGeneratorTool)
 # 
 #  64         400 LIST_APPEND              1
 # 
-#  99         402 LOAD_NAME               49 (RenewableIntegrationSkill)
+#  99         402 LOAD_NAME               49 (RenewableIntegrationAnalysis)
 # 
 #  64         404 LIST_APPEND              1
 # 
-# 100         406 LOAD_NAME               50 (ResultCompareSkill)
+# 100         406 LOAD_NAME               50 (ResultCompareTool)
 # 
 #  64         408 LIST_APPEND              1
 # 
-# 101         410 LOAD_NAME               51 (ShortCircuitSkill)
+# 101         410 LOAD_NAME               51 (ShortCircuitAnalysis)
 # 
 #  64         412 LIST_APPEND              1
 # 
-# 102         414 LOAD_NAME               52 (SmallSignalStabilitySkill)
+# 102         414 LOAD_NAME               52 (SmallSignalStabilityAnalysis)
 # 
 #  64         416 LIST_APPEND              1
 # 
-# 103         418 LOAD_NAME               53 (StudyPipelineSkill)
+# 103         418 LOAD_NAME               53 (StudyPipelineTool)
 # 
 #  64         420 LIST_APPEND              1
 # 
-# 104         422 LOAD_NAME               54 (TheveninEquivalentSkill)
+# 104         422 LOAD_NAME               54 (TheveninEquivalentAnalysis)
 # 
 #  64         424 LIST_APPEND              1
 # 
-# 105         426 LOAD_NAME               55 (TopologyCheckSkill)
+# 105         426 LOAD_NAME               55 (TopologyCheckTool)
 # 
 #  64         428 LIST_APPEND              1
 # 
-# 106         430 LOAD_NAME               56 (TransientStabilityMarginSkill)
+# 106         430 LOAD_NAME               56 (TransientStabilityMarginAnalysis)
 # 
 #  64         432 LIST_APPEND              1
 # 
-# 107         434 LOAD_NAME               57 (TransientStabilitySkill)
+# 107         434 LOAD_NAME               57 (TransientStabilityAnalysis)
 # 
 #  64         436 LIST_APPEND              1
 # 
-# 108         438 LOAD_NAME               58 (VisualizeSkill)
+# 108         438 LOAD_NAME               58 (VisualizeTool)
 # 
 #  64         440 LIST_APPEND              1
 # 
-# 109         442 LOAD_NAME               59 (VoltageStabilitySkill)
+# 109         442 LOAD_NAME               59 (VoltageStabilityAnalysis)
 # 
 #  64         444 LIST_APPEND              1
 # 
-# 110         446 LOAD_NAME               60 (VSIWeakBusSkill)
+# 110         446 LOAD_NAME               60 (VSIWeakBusAnalysis)
 # 
 #  64         448 LIST_APPEND              1
 # 
-# 111         450 LOAD_NAME               61 (WaveformExportSkill)
+# 111         450 LOAD_NAME               61 (WaveformExportTool)
 # 
 #  64         452 LIST_APPEND              1
 #             454 STORE_NAME              62 (ALL_SKILL_CLASSES)
@@ -1893,7 +1893,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_dudv_curve_has_buses at 0x3aecb0e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 220>:
 # 220           0 RESUME                   0
 # 
-# 222           2 LOAD_GLOBAL              1 (NULL + DUDVCurveSkill)
+# 222           2 LOAD_GLOBAL              1 (NULL + DUDVCurveAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2133,7 +2133,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_param_scan_has_required_fields at 0x3aecbe70, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 228>:
 # 228           0 RESUME                   0
 # 
-# 230           2 LOAD_GLOBAL              1 (NULL + ParamScanSkill)
+# 230           2 LOAD_GLOBAL              1 (NULL + ParamScanAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2419,7 +2419,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_maintenance_security_has_maintenance at 0x3aecc5f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 237>:
 # 237           0 RESUME                   0
 # 
-# 239           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecuritySkill)
+# 239           2 LOAD_GLOBAL              1 (NULL + MaintenanceSecurityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2573,7 +2573,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_reactive_compensation_has_weak_buses_or_vsi at 0x3aee2dd0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 244>:
 # 244           0 RESUME                   0
 # 
-# 246           2 LOAD_GLOBAL              1 (NULL + ReactiveCompensationDesignSkill)
+# 246           2 LOAD_GLOBAL              1 (NULL + ReactiveCompensationDesignAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2777,7 +2777,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_result_compare_has_sources at 0x3aecd0e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 252>:
 # 252           0 RESUME                   0
 # 
-# 254           2 LOAD_GLOBAL              1 (NULL + ResultCompareSkill)
+# 254           2 LOAD_GLOBAL              1 (NULL + ResultCompareTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -2931,7 +2931,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_visualize_has_source at 0x3aecd580, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 259>:
 # 259           0 RESUME                   0
 # 
-# 261           2 LOAD_GLOBAL              1 (NULL + VisualizeSkill)
+# 261           2 LOAD_GLOBAL              1 (NULL + VisualizeTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3085,7 +3085,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_waveform_export_has_source_and_export at 0x3afa6d80, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 266>:
 # 266           0 RESUME                   0
 # 
-# 268           2 LOAD_GLOBAL              1 (NULL + WaveformExportSkill)
+# 268           2 LOAD_GLOBAL              1 (NULL + WaveformExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3230,7 +3230,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_compare_visualization_has_sources at 0x3aecca90, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 273>:
 # 273           0 RESUME                   0
 # 
-# 275           2 LOAD_GLOBAL              1 (NULL + CompareVisualizationSkill)
+# 275           2 LOAD_GLOBAL              1 (NULL + CompareVisualizationTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3384,7 +3384,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_comtrade_export_has_source_and_export at 0x3aec4000, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 280>:
 # 280           0 RESUME                   0
 # 
-# 282           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+# 282           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3529,7 +3529,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_auto_loop_breaker_has_algorithm at 0x3af937b0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 287>:
 # 287           0 RESUME                   0
 # 
-# 289           2 LOAD_GLOBAL              1 (NULL + AutoLoopBreakerSkill)
+# 289           2 LOAD_GLOBAL              1 (NULL + AutoLoopBreakerTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3608,7 +3608,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_model_parameter_extractor_has_extraction at 0x3af97180, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 293>:
 # 293           0 RESUME                   0
 # 
-# 295           2 LOAD_GLOBAL              1 (NULL + ModelParameterExtractorSkill)
+# 295           2 LOAD_GLOBAL              1 (NULL + ModelParameterExtractorTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3687,7 +3687,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_report_generator_has_report at 0x3ae76f20, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 299>:
 # 299           0 RESUME                   0
 # 
-# 301           2 LOAD_GLOBAL              1 (NULL + ReportGeneratorSkill)
+# 301           2 LOAD_GLOBAL              1 (NULL + ReportGeneratorTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3766,7 +3766,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_renewable_integration_has_renewable at 0x3aeb9bc0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 305>:
 # 305           0 RESUME                   0
 # 
-# 307           2 LOAD_GLOBAL              1 (NULL + RenewableIntegrationSkill)
+# 307           2 LOAD_GLOBAL              1 (NULL + RenewableIntegrationAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3845,7 +3845,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_orthogonal_sensitivity_has_parameters_and_target at 0x3aec5210, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 311>:
 # 311           0 RESUME                   0
 # 
-# 313           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivitySkill)
+# 313           2 LOAD_GLOBAL              1 (NULL + OrthogonalSensitivityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -3990,7 +3990,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_component_catalog_has_filters_and_options at 0x3aea9820, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 318>:
 # 318           0 RESUME                   0
 # 
-# 320           2 LOAD_GLOBAL              1 (NULL + ComponentCatalogSkill)
+# 320           2 LOAD_GLOBAL              1 (NULL + ComponentCatalogTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -4135,7 +4135,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_model_builder_has_workflow_and_base_model at 0x3aece640, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_skill_config_integrity.py", line 325>:
 # 325           0 RESUME                   0
 # 
-# 327           2 LOAD_GLOBAL              1 (NULL + ModelBuilderSkill)
+# 327           2 LOAD_GLOBAL              1 (NULL + ModelBuilderTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

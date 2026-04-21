@@ -23,7 +23,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for ComtradeExportSkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for ComtradeExportTool v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -45,10 +45,10 @@ pass  # TODO: restore
 #              38 STORE_NAME               7 (pytest)
 # 
 #   4          40 LOAD_CONST               1 (0)
-#              42 LOAD_CONST               3 (('ComtradeExportSkill',))
-#              44 IMPORT_NAME              8 (cloudpss_skills_v2.skills.comtrade_export)
-#              46 IMPORT_FROM              9 (ComtradeExportSkill)
-#              48 STORE_NAME               9 (ComtradeExportSkill)
+#              42 LOAD_CONST               3 (('ComtradeExportTool',))
+#              44 IMPORT_NAME              8 (cloudpss_skills_v2.tools.comtrade_export)
+#              46 IMPORT_FROM              9 (ComtradeExportTool)
+#              48 STORE_NAME               9 (ComtradeExportTool)
 #              50 POP_TOP
 # 
 #   7          52 PUSH_NULL
@@ -102,7 +102,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_source at 0x3af9f150, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 10>:
 #  10           0 RESUME                   0
 # 
-#  11           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  11           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -342,7 +342,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_source_missing_job_id at 0x3afa3fb0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 17>:
 #  17           0 RESUME                   0
 # 
-#  18           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  18           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -426,7 +426,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3afa7720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 23>:
 #  23           0 RESUME                   0
 # 
-#  24           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  24           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -621,7 +621,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_cfg_header at 0x3af9e7f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 34>:
 #  34           0 RESUME                   0
 # 
-#  35           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  35           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -829,7 +829,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_format_timestamp at 0x3afa5570, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 47>:
 #  47           0 RESUME                   0
 # 
-#  48           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  48           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -904,7 +904,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_generate_dat_record at 0x3afa6720, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 52>:
 #  52           0 RESUME                   0
 # 
-#  53           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  53           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1105,7 +1105,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3afa4860, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 62>:
 #  62           0 RESUME                   0
 # 
-#  63           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  63           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1200,7 +1200,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_valid_config_returns_success at 0x3afa99a0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_comtrade_export.py", line 67>:
 #  67           0 RESUME                   0
 # 
-#  68           2 LOAD_GLOBAL              1 (NULL + ComtradeExportSkill)
+#  68           2 LOAD_GLOBAL              1 (NULL + ComtradeExportTool)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 

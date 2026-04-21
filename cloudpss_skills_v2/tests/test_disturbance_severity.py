@@ -38,7 +38,7 @@ pass  # TODO: restore
 # === FULL DISASSEMBLY (for manual reconstruction) ===
 #   0           0 RESUME                   0
 # 
-#   1           2 LOAD_CONST               0 ('Tests for DisturbanceSeveritySkill v2.')
+#   1           2 LOAD_CONST               0 ('Tests for DisturbanceSeverityAnalysis v2.')
 #               4 STORE_NAME               0 (__doc__)
 # 
 #   3           6 LOAD_CONST               1 (0)
@@ -65,10 +65,10 @@ pass  # TODO: restore
 #              46 STORE_NAME               9 (pytest)
 # 
 #   5          48 LOAD_CONST               1 (0)
-#              50 LOAD_CONST               3 (('DisturbanceSeveritySkill',))
-#              52 IMPORT_NAME             10 (cloudpss_skills_v2.skills.disturbance_severity)
-#              54 IMPORT_FROM             11 (DisturbanceSeveritySkill)
-#              56 STORE_NAME              11 (DisturbanceSeveritySkill)
+#              50 LOAD_CONST               3 (('DisturbanceSeverityAnalysis',))
+#              52 IMPORT_NAME             10 (cloudpss_skills_v2.poweranalysis.disturbance_severity)
+#              54 IMPORT_FROM             11 (DisturbanceSeverityAnalysis)
+#              56 STORE_NAME              11 (DisturbanceSeverityAnalysis)
 #              58 POP_TOP
 # 
 #   8          60 PUSH_NULL
@@ -139,7 +139,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_missing_model at 0x3af8e200, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 9>:
 #   9           0 RESUME                   0
 # 
-#  10           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  10           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -291,7 +291,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_validate_valid_config at 0x3afa5260, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 15>:
 #  15           0 RESUME                   0
 # 
-#  16           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  16           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -483,7 +483,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_dv_positive_margin at 0x3af9a920, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 24>:
 #  24           0 RESUME                   0
 # 
-#  25           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  25           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -748,7 +748,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_dv_negative_margin at 0x3af3a2f0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 39>:
 #  39           0 RESUME                   0
 # 
-#  40           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  40           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -905,7 +905,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_dv_steady_voltage at 0x3af994a0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 52>:
 #  52           0 RESUME                   0
 # 
-#  53           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  53           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1061,7 +1061,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_si at 0x3aefe140, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 65>:
 #  65           0 RESUME                   0
 # 
-#  66           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  66           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1162,7 +1162,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_calculate_si_no_deviation at 0x3af9e540, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 75>:
 #  75           0 RESUME                   0
 # 
-#  76           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  76           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1277,7 +1277,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_critical at 0x3afa23c0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 86>:
 #  86           0 RESUME                   0
 # 
-#  87           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  87           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1398,7 +1398,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_warning at 0x3af95770, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 90>:
 #  90           0 RESUME                   0
 # 
-#  91           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  91           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1514,7 +1514,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_assess_severity_observe at 0x3af91360, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 94>:
 #  94           0 RESUME                   0
 # 
-#  95           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+#  95           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1642,7 +1642,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_identify_weak_points at 0x3afac750, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 100>:
 # 100           0 RESUME                   0
 # 
-# 101           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+# 101           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
@@ -1842,7 +1842,7 @@ pass  # TODO: restore
 # Disassembly of <code object test_run_invalid_config_returns_failure at 0x3afa13e0, file "/home/chenying/researches/cloudpss-toolkit/cloudpss_skills_v2/tests/test_disturbance_severity.py", line 113>:
 # 113           0 RESUME                   0
 # 
-# 114           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeveritySkill)
+# 114           2 LOAD_GLOBAL              1 (NULL + DisturbanceSeverityAnalysis)
 #              12 CALL                     0
 #              20 STORE_FAST               1 (skill)
 # 
