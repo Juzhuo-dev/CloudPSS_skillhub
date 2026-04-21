@@ -13,6 +13,9 @@ from cloudpss_skills_v2.powerskill.base import SimulationAPI
 from cloudpss_skills_v2.powerskill.powerflow import PowerFlow
 from cloudpss_skills_v2.powerskill.short_circuit import ShortCircuit
 from cloudpss_skills_v2.powerskill.emt import EMT
+from cloudpss_skills_v2.powerskill.transient import TransientStability
+from cloudpss_skills_v2.powerskill.harmonic import HarmonicAnalysis
+from cloudpss_skills_v2.powerskill.small_signal import SmallSignalStability
 
 
 def _create_adapter(
@@ -49,6 +52,9 @@ _API_MAP = {
     "powerflow": PowerFlow,
     "short_circuit": ShortCircuit,
     "emt": EMT,
+    "transient": TransientStability,
+    "harmonic": HarmonicAnalysis,
+    "small_signal": SmallSignalStability,
 }
 
 
@@ -78,6 +84,30 @@ class Engine:
         adapter = _create_adapter(engine, "emt", config)
         adapter.connect()
         return EMT(adapter=adapter)
+
+    @classmethod
+    def create_transient(
+        cls, engine: str = "cloudpss", config: EngineConfig | None = None
+    ) -> TransientStability:
+        adapter = _create_adapter(engine, "transient", config)
+        adapter.connect()
+        return TransientStability(adapter=adapter)
+
+    @classmethod
+    def create_harmonic(
+        cls, engine: str = "cloudpss", config: EngineConfig | None = None
+    ) -> HarmonicAnalysis:
+        adapter = _create_adapter(engine, "harmonic", config)
+        adapter.connect()
+        return HarmonicAnalysis(adapter=adapter)
+
+    @classmethod
+    def create_small_signal(
+        cls, engine: str = "cloudpss", config: EngineConfig | None = None
+    ) -> SmallSignalStability:
+        adapter = _create_adapter(engine, "small_signal", config)
+        adapter.connect()
+        return SmallSignalStability(adapter=adapter)
 
     @classmethod
     def create(
