@@ -871,8 +871,100 @@ class CloudPSSModelConverter(ModelConverter):
         report = ConversionReport(
             source_engine="model", target_engine="cloudpss", mode=mode
         )
-        report.errors.append("CloudPSS model write-back not yet implemented")
-        return (None, report)
+        cloudpss_model = {
+            "metadata": {
+                "name": model.name,
+                "base_mva": model.base_mva,
+                "frequency_hz": model.frequency_hz,
+                "conversion_mode": mode.value,
+            },
+            "components": {},
+            "connections": [],
+        }
+        bus_name_to_id = {}
+        for i, bus in enumerate(model.buses):
+            bus_id = f"bus_{i}"
+            bus_name_to_id[bus.name] = bus_id
+            cloudpss_model["components"][bus_id] = {
+                "rid": "model/CloudPSS/_newBus_3p",
+                "args": {
+                    "Name": bus.name,
+                    "VBase": bus.voltage_kv,
+                    "V": bus.voltage_pu or 1.0,
+                    "Theta": bus.angle_deg or 0.0,
+                },
+                "pins": {"0": f"node_{bus_id}"},
+            }
+            bus_type_str = (
+                "Slack"
+                if bus.bus_type == BusType.SLACK
+                else ("PV" if bus.bus_type == BusType.PV else "PQ")
+            )
+            cloudpss_model["components"][bus_id]["args"]["Type"] = bus_type_str
+        gen_count = 0
+        for gen in model.generators:
+            if gen.bus not in bus_name_to_id:
+                continue
+            gen_id = f"gen_{gen_count}"
+            gen_count += 1
+            cloudpss_model["components"][gen_id] = {
+                "rid": "model/CloudPSS/_newGenerator_3p",
+                "args": {
+                    "Name": gen.name,
+                    "P": gen.p_mw,
+                    "Q": gen.q_mvar or 0.0,
+                    "V": gen.v_set_pu or 1.0,
+                },
+                "pins": {"0": f"node_{bus_name_to_id[gen.bus]}"},
+            }
+        load_count = 0
+        for load in model.loads:
+            if load.bus not in bus_name_to_id:
+                continue
+            load_id = f"load_{load_count}"
+            load_count += 1
+            cloudpss_model["components"][load_id] = {
+                "rid": "model/CloudPSS/_newLoad_3p",
+                "args": {
+                    "Name": load.name,
+                    "P": load.p_mw,
+                    "Q": load.q_mvar or 0.0,
+                },
+                "pins": {"0": f"node_{bus_name_to_id[load.bus]}"},
+            }
+        branch_count = 0
+        for branch in model.branches:
+            if (
+                branch.from_bus not in bus_name_to_id
+                or branch.to_bus not in bus_name_to_id
+            ):
+                continue
+            branch_id = f"branch_{branch_count}"
+            branch_count += 1
+            r_pu = branch.resistance_pu or 0.01
+            x_pu = branch.reactance_pu or 0.1
+            z_ohm = ((r_pu**2 + x_pu**2) ** 0.5) * (model.base_mva / 110.0)
+            cloudpss_model["components"][branch_id] = {
+                "rid": "model/CloudPSS/TransmissionLine",
+                "args": {
+                    "Name": branch.name,
+                    "R1pu": r_pu,
+                    "X1pu": x_pu,
+                    "B1pu": branch.susceptance_pu or 0.0,
+                    "Rating": getattr(branch, "rating_mva", 100.0) or 100.0,
+                },
+                "pins": {
+                    "0": f"node_{bus_name_to_id[branch.from_bus]}",
+                    "1": f"node_{bus_name_to_id[branch.to_bus]}",
+                },
+            }
+        report.items_converted = (
+            len(model.buses)
+            + len(model.generators)
+            + len(model.loads)
+            + len(model.branches)
+        )
+        return (cloudpss_model, report)
 
 
 from cloudpss_skills_v2.libs.data_lib import BusType, GeneratorType, BranchType
