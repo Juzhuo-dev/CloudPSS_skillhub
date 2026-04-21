@@ -305,6 +305,7 @@ class PandapowerModelConverter(ModelConverter):
                 )
             )
         branches = []
+        bus_names = net.bus["name"].astype(str).to_dict()
         for idx, row in net.line.iterrows():
             loading = None
             if (
@@ -313,11 +314,15 @@ class PandapowerModelConverter(ModelConverter):
                 and idx in net.res_line.index
             ):
                 loading = net.res_line.at[idx, "loading_percent"]
+            from_idx = row.get("from_bus", idx)
+            to_idx = row.get("to_bus", idx)
+            from_bus_name = bus_names.get(from_idx, str(from_idx))
+            to_bus_name = bus_names.get(to_idx, str(to_idx))
             branches.append(
                 BranchData(
                     name=str(row.get("name", f"Line_{idx}")),
-                    from_bus=str(row.get("from_bus", "")),
-                    to_bus=str(row.get("to_bus", "")),
+                    from_bus=from_bus_name,
+                    to_bus=to_bus_name,
                     resistance_pu=float(
                         row.get("r_ohm_per_km", 0) * row.get("length_km", 1)
                     ),
@@ -329,33 +334,42 @@ class PandapowerModelConverter(ModelConverter):
                 )
             )
         generators = []
+        bus_names = net.bus["name"].astype(str).to_dict()
         for idx, row in net.gen.iterrows():
+            bus_idx = row.get("bus", idx)
+            bus_name = bus_names.get(bus_idx, str(bus_idx))
             generators.append(
                 GeneratorData(
                     name=str(row.get("name", f"Gen_{idx}")),
-                    bus=str(row.get("bus", "")),
+                    bus=bus_name,
                     p_mw=float(row.get("p_mw", 0)),
                     v_set_pu=float(row.get("vm_pu", 1)),
                     engine_id=idx,
                 )
             )
         if hasattr(net, "ext_grid") and not net.ext_grid.empty:
+            bus_names = net.bus["name"].astype(str).to_dict()
             for idx, row in net.ext_grid.iterrows():
+                bus_idx = row.get("bus", idx)
+                bus_name = bus_names.get(bus_idx, str(bus_idx))
                 generators.append(
                     GeneratorData(
                         name=str(row.get("name", f"ExtGrid_{idx}")),
-                        bus=str(row.get("bus", "")),
+                        bus=bus_name,
                         generator_type=GeneratorType.EXTERNAL_GRID,
                         v_set_pu=float(row.get("vm_pu", 1)),
                         engine_id=idx,
                     )
                 )
         loads_list = []
+        bus_names = net.bus["name"].astype(str).to_dict()
         for idx, row in net.load.iterrows():
+            bus_idx = row.get("bus", idx)
+            bus_name = bus_names.get(bus_idx, str(bus_idx))
             loads_list.append(
                 LoadData(
                     name=str(row.get("name", f"Load_{idx}")),
-                    bus=str(row.get("bus", "")),
+                    bus=bus_name,
                     p_mw=float(row.get("p_mw", 0)),
                     q_mvar=float(row.get("q_mvar", 0)),
                     engine_id=idx,
@@ -365,10 +379,12 @@ class PandapowerModelConverter(ModelConverter):
         if hasattr(net, "switch") and not net.switch.empty:
             for idx, row in net.switch.iterrows():
                 state = "closed" if row.get("closed", True) else "open"
+                sw_bus_idx = row.get("bus", idx)
+                sw_bus_name = bus_names.get(sw_bus_idx, str(sw_bus_idx))
                 switches.append(
                     SwitchData(
                         name=str(row.get("name", f"Switch_{idx}")),
-                        from_bus=str(row.get("bus", "")),
+                        from_bus=sw_bus_name,
                         to_bus=str(row.get("element", "")),
                         state=SwitchState(state),
                         rated_current_ka=row.get("rated_current", None),
@@ -379,10 +395,12 @@ class PandapowerModelConverter(ModelConverter):
         shunts = []
         if hasattr(net, "shunt") and not net.shunt.empty:
             for idx, row in net.shunt.iterrows():
+                bus_idx = row.get("bus", idx)
+                bus_name = bus_names.get(bus_idx, str(bus_idx))
                 shunts.append(
                     ShuntData(
                         name=str(row.get("name", f"Shunt_{idx}")),
-                        bus=str(row.get("bus", "")),
+                        bus=bus_name,
                         q_mvar=float(row.get("q_mvar", 0)),
                         step=int(row.get("step", 1)),
                         max_step=int(row.get("max_step", 1)),
