@@ -24,6 +24,13 @@ from cloudpss_skills_v2.powerskill import (
     ModelHandle,
     ComponentType,
 )
+from cloudpss_skills_v2.libs.data_lib import (
+    SeverityLevel,
+    ViolationRecord,
+    ContingencyRecord,
+    AnalysisSummary,
+    SecurityAnalysisResult,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -189,10 +196,10 @@ class N1SecurityAnalysis:
                 ]
                 self._log("INFO", f"将检查 {len(all_removable)} 条指定支路")
 
-            results = []
+            results: list[ContingencyRecord] = []
+            all_violations: list[ViolationRecord] = []
             passed = 0
             failed = 0
-            violations_found = []
 
             voltage_threshold = analysis_config.get("voltage_threshold", 0.05)
             thermal_threshold = analysis_config.get("thermal_threshold", 1.0)
@@ -215,20 +222,21 @@ class N1SecurityAnalysis:
                     )
 
                     if not sim_result.is_success:
-                        result = {
-                            "branch_id": branch.key,
-                            "branch_name": branch.name,
-                            "status": "failed",
-                            "converged": False,
-                            "violations": [
-                                {"type": "convergence", "message": "潮流不收敛"}
+                        result = ContingencyRecord(
+                            branch_key=branch.key,
+                            branch_name=branch.name,
+                            converged=False,
+                            severity=SeverityLevel.CRITICAL,
+                            violations=[
+                                ViolationRecord(
+                                    violation_type="convergence",
+                                    component=branch.name,
+                                    severity=SeverityLevel.CRITICAL,
+                                )
                             ],
-                            "violation_summary": "潮流不收敛",
-                        }
-                        failed += 1
-                        violations_found.append(
-                            {"type": "convergence", "branch": branch.name}
                         )
+                        failed += 1
+                        all_violations.append(result.violations[0])
                         self._log("ERROR", "  -> N-1失败: 潮流不收敛")
                         results.append(result)
                         continue
@@ -247,65 +255,94 @@ class N1SecurityAnalysis:
                         t_violations = self._check_thermal_violations(
                             branch_data, thermal_threshold
                         )
+                        case_violations = self._check_voltage_violations(
+                            bus_data, voltage_threshold
+                        )
                         case_violations.extend(t_violations)
 
-                    if case_violations:
-                        result = {
-                            "branch_id": branch.key,
-                            "branch_name": branch.name,
-                            "status": "failed",
-                            "converged": True,
-                            "violations": case_violations,
-                            "violation_summary": self._summarize_violations(
-                                case_violations
+                    has_violations = len(case_violations) > 0
+                    severity = (
+                        SeverityLevel.CRITICAL
+                        if has_violations
+                        else SeverityLevel.NORMAL
+                    )
+
+                    if has_violations:
+                        result = ContingencyRecord(
+                            branch_key=branch.key,
+                            branch_name=branch.name,
+                            converged=True,
+                            severity=severity,
+                            violations=case_violations,
+                            min_vm_pu=min(
+                                (b.get("voltage_pu", 1.0) for b in bus_data),
+                                default=1.0,
                             ),
-                        }
+                            max_loading_pct=max(
+                                (b.get("loading_pct", 0) for b in branch_data),
+                                default=0.0,
+                            ),
+                        )
                         failed += 1
-                        violations_found.extend(case_violations)
+                        all_violations.extend(case_violations)
                         self._log("WARNING", "  -> 发现电压/热稳定违规")
                     else:
-                        result = {
-                            "branch_id": branch.key,
-                            "branch_name": branch.name,
-                            "status": "passed",
-                            "converged": True,
-                            "violations": [],
-                            "violation_summary": None,
-                        }
+                        result = ContingencyRecord(
+                            branch_key=branch.key,
+                            branch_name=branch.name,
+                            converged=True,
+                            severity=SeverityLevel.NORMAL,
+                        )
                         passed += 1
                         self._log("INFO", "  -> N-1通过")
 
                     results.append(result)
 
                 except Exception as e:
-                    result = {
-                        "branch_id": branch.key,
-                        "branch_name": branch.name,
-                        "status": "failed",
-                        "converged": False,
-                        "violations": [{"type": "error", "message": str(e)}],
-                        "violation_summary": str(e),
-                    }
+                    result = ContingencyRecord(
+                        branch_key=branch.key,
+                        branch_name=branch.name,
+                        converged=False,
+                        severity=SeverityLevel.CRITICAL,
+                        violations=[
+                            ViolationRecord(
+                                violation_type="error",
+                                component=branch.name,
+                                severity=SeverityLevel.CRITICAL,
+                            )
+                        ],
+                    )
                     failed += 1
                     results.append(result)
                     self._log("ERROR", f"  -> 异常: {e}")
 
-            pass_rate = passed / len(all_removable) * 100 if all_removable else 0
-            self._log("INFO", f"N-1校核完成: 通过 {passed}, 失败 {failed}")
-            self._log("INFO", f"通过率: {pass_rate:.1f}%")
+            warnings = len([r for r in results if r.severity == SeverityLevel.WARNING])
+            overall = (
+                SeverityLevel.CRITICAL
+                if failed > 0
+                else SeverityLevel.WARNING
+                if warnings > 0
+                else SeverityLevel.NORMAL
+            )
+
+            summary = AnalysisSummary(
+                total_scenarios=len(all_removable),
+                passed=passed,
+                failed=failed,
+                warnings=warnings,
+                overall_severity=overall,
+            )
+
+            typed_result = SecurityAnalysisResult(
+                summary=summary,
+                contingencies=results,
+                violations=all_violations,
+            )
 
             result_data = {
                 "model_rid": model_rid,
                 "timestamp": datetime.now().isoformat(),
-                "summary": {
-                    "total_branches": len(all_removable),
-                    "passed": passed,
-                    "failed": failed,
-                    "pass_rate": passed / len(all_removable) if all_removable else 0,
-                },
-                "results": results,
-                "failed_branches": [r for r in results if r["status"] != "passed"],
-                "all_violations": violations_found,
+                "_typed": typed_result.to_dict(),
                 "voltage_threshold": voltage_threshold,
                 "thermal_threshold": thermal_threshold,
             }
@@ -343,7 +380,7 @@ class N1SecurityAnalysis:
 
     def _check_voltage_violations(
         self, bus_data: list[dict], threshold: float
-    ) -> list[dict]:
+    ) -> list[ViolationRecord]:
         violations = []
         lower_limit = 1.0 - threshold
         upper_limit = 1.0 + threshold
@@ -353,34 +390,36 @@ class N1SecurityAnalysis:
             bus_name = bus.get("name", "unknown")
 
             if vm < lower_limit:
+                severity = (
+                    SeverityLevel.CRITICAL if vm < 0.85 else SeverityLevel.WARNING
+                )
                 violations.append(
-                    {
-                        "type": "voltage",
-                        "bus_name": bus_name,
-                        "voltage": round(vm, 4),
-                        "limit": lower_limit,
-                        "deviation": round(lower_limit - vm, 4),
-                        "direction": "undervoltage",
-                        "message": f"电压偏低: {bus_name} 电压={vm:.4f}pu (下限={lower_limit:.4f})",
-                    }
+                    ViolationRecord(
+                        violation_type="voltage",
+                        component=bus_name,
+                        value=vm,
+                        threshold=lower_limit,
+                        severity=severity,
+                    )
                 )
             elif vm > upper_limit:
+                severity = (
+                    SeverityLevel.CRITICAL if vm > 1.15 else SeverityLevel.WARNING
+                )
                 violations.append(
-                    {
-                        "type": "voltage",
-                        "bus_name": bus_name,
-                        "voltage": round(vm, 4),
-                        "limit": upper_limit,
-                        "deviation": round(vm - upper_limit, 4),
-                        "direction": "overvoltage",
-                        "message": f"电压偏高: {bus_name} 电压={vm:.4f}pu (上限={upper_limit:.4f})",
-                    }
+                    ViolationRecord(
+                        violation_type="voltage",
+                        component=bus_name,
+                        value=vm,
+                        threshold=upper_limit,
+                        severity=severity,
+                    )
                 )
         return violations
 
     def _check_thermal_violations(
         self, branch_data: list[dict], threshold: float
-    ) -> list[dict]:
+    ) -> list[ViolationRecord]:
         violations = []
         for branch in branch_data:
             branch_name = branch.get("name", "unknown")
@@ -393,16 +432,17 @@ class N1SecurityAnalysis:
                 loading = max(abs(p_from), abs(p_to))
 
             if loading > threshold:
-                utilization_pct = loading * 100
+                severity = (
+                    SeverityLevel.CRITICAL if loading > 1.2 else SeverityLevel.WARNING
+                )
                 violations.append(
-                    {
-                        "type": "thermal",
-                        "branch_name": branch_name,
-                        "loading": round(loading, 4),
-                        "threshold": threshold,
-                        "utilization": round(utilization_pct, 2),
-                        "message": f"线路过载: {branch_name} 负载率={utilization_pct:.1f}%",
-                    }
+                    ViolationRecord(
+                        violation_type="thermal",
+                        component=branch_name,
+                        value=loading,
+                        threshold=threshold,
+                        severity=severity,
+                    )
                 )
         return violations
 
