@@ -150,3 +150,62 @@ class TestPandapowerShortCircuitAdapter:
             SimulationStatus.COMPLETED,
             SimulationStatus.FAILED,
         ]
+
+
+@pytest.mark.pandapower
+class TestModelManipulation:
+    @pytest.fixture
+    def adapter(self):
+        a = PandapowerPowerFlowAdapter()
+        a.connect()
+        return a
+
+    def test_load_model_case14(self, adapter):
+        success = adapter.load_model("case14")
+        assert success is True
+
+    def test_get_current_model_id(self, adapter):
+        adapter.load_model("case14")
+        model_id = adapter.get_current_model_id()
+        assert model_id == "case14"
+
+    def test_get_components_returns_list(self, adapter):
+        adapter.load_model("case14")
+        components = adapter.get_components("case14")
+        assert isinstance(components, list)
+        assert len(components) > 0
+
+    def test_get_components_by_type_bus(self, adapter):
+        adapter.load_model("case14")
+        buses = adapter.get_components_by_type("case14", "bus")
+        assert len(buses) >= 14
+
+
+@pytest.mark.pandapower
+class TestModelClone:
+    @pytest.fixture
+    def adapter(self):
+        a = PandapowerPowerFlowAdapter()
+        a.connect()
+        return a
+
+    def test_clone_model(self, adapter):
+        adapter.load_model("case14")
+        clone_id = adapter.clone_model("case14")
+        assert clone_id is not None
+        assert clone_id != "case14"
+
+
+@pytest.mark.pandapower
+class TestResultRetrieval:
+    @pytest.fixture
+    def adapter(self):
+        a = PandapowerPowerFlowAdapter()
+        a.connect()
+        return a
+
+    def test_run_and_get_result(self, adapter):
+        result = adapter.run_simulation({"model_id": "case14"})
+        job_id = result.job_id
+        retrieved = adapter.get_result(job_id)
+        assert retrieved is not None
